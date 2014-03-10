@@ -1,0 +1,5 @@
+[user]
+	name = Nikola Savic
+	email = NikolaSavic@gmail.com
+[credential]
+	helper = osxkeychain
