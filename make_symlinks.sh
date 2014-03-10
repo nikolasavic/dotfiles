@@ -4,7 +4,7 @@
 #   This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 # 
 #   cd ~/dotfiles
-#   chmod +x makesymlinks.sh
+#   chmod +x make_symlinks.sh
 #   ./make_symlinks.sh
 ####
 
