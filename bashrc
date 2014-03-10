@@ -98,6 +98,8 @@ alias cd...='cd ../..; la'
 alias cd....='cd ../../..; la'
 alias cd.....='cd ../../../..; la'
 
+alias P="cd ~/Projects"
+
 # Prevent headaches
 alias cp='cp -v'
 alias rm='rm -v'
@@ -109,6 +111,7 @@ alias gst='git status'
 alias gcam='git commit -am'
 alias gall='git add .'
 alias gcl='git clone'
+alias gd='git diff'
 alias gfo='git fetch origin'
 alias gr='git reset'
 alias gp='git push'
