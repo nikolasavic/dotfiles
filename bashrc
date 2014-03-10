@@ -36,6 +36,8 @@ export CLICOLOR=1
 ###
 
 PROMPT_COMMAND='__git_ps1 "\u:\h \w" " \$ "'
+# Looks like:
+# Nikola:Caspar ~/dotfiles (master) $
 
 # Reference
 # unstaged    *
