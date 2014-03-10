@@ -132,7 +132,7 @@ alias c='clear'
 alias q='exit'
 
 # RVM
-alias rv='ruby -v;rails -v'
+alias v='ruby -v;rails -v'
 alias rl='rvm list'
 alias ru='rvm use'
 alias rgl='rvm gemset list'
