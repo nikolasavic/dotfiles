@@ -3,3 +3,5 @@
 	email = NikolaSavic@gmail.com
 [credential]
 	helper = osxkeychain
+[core]
+	excludesfile = /Users/Nikola/.gitignore_global
