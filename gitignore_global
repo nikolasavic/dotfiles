@@ -23,7 +23,6 @@ Icon
 
 *.rbc
 capybara-*.html
-.rspec
 /log
 /tmp
 /db/*.sqlite3
