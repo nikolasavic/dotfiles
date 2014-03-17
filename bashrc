@@ -109,6 +109,7 @@ alias mv='mv -v'
 alias g='git'
 alias gst='git status'
 alias gcam='git commit -am'
+alias gcm='git commit -m'
 alias gall='git add .'
 alias gcl='git clone'
 alias gd='git diff'
@@ -126,6 +127,10 @@ alias gba='git branch -a'
 alias gbr='git branch -r'
 alias gco='git checkout'
 alias gdel='git branch -D'
+
+# Tests
+alias r='rspec'
+alias rs='rspec spec'
 
 # Shell
 alias c='clear'
