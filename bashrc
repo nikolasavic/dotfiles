@@ -19,6 +19,10 @@ source ~/.git-completion.sh
 # Environmental Variables
 ###
 
+# IRC
+# export IRCHOST="yourValue"
+# export USER="yourValue"
+
 # Globals for .git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWCOLORHINTS=true
@@ -99,6 +103,7 @@ alias cd....='cd ../../..; la'
 alias cd.....='cd ../../../..; la'
 
 alias P="cd ~/Projects"
+alias D="cd ~/Downloads"
 
 # Prevent headaches
 alias cp='cp -v'
