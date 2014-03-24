@@ -145,13 +145,13 @@ alias c='clear'
 alias q='exit'
 
 # RVM
-alias v='ruby -v;rails -v'
-alias rl='rvm list'
-alias ru='rvm use'
-alias rgl='rvm gemset list'
-alias rgc='rvm gemset create'
-alias rgd='rvm gemset delete'
-alias rgu='rvm gemset use'
+# alias v='ruby -v;rails -v'
+# alias rl='rvm list'
+# alias ru='rvm use'
+# alias rgl='rvm gemset list'
+# alias rgc='rvm gemset create'
+# alias rgd='rvm gemset delete'
+# alias rgu='rvm gemset use'
 
 # Bundler Commands
 alias be='bundle exec'

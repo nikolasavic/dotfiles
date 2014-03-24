@@ -12,7 +12,7 @@
 export PATH=/usr/local/bin:$PATH
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Sublime Text as default editor
 export EDITOR='subl -w'
