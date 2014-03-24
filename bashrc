@@ -137,12 +137,19 @@ alias gco='git checkout'
 alias gdel='git branch -D'
 
 # Tests
-alias r='rspec'
 alias rs='rspec spec'
 
 # Shell
 alias c='clear'
 alias q='exit'
+
+# RBenv
+alias rv='rbenv versions'
+alias rl='rbenv local'
+alias rr='rbenv rehash'
+alias rwhich='rbenv which'
+alias rwhence='rbenv whence'
+
 
 # RVM
 # alias v='ruby -v;rails -v'
