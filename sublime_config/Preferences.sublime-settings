@@ -1,7 +1,7 @@
 {
   "always_show_minimap_viewport": true,
   "bold_folder_labels": true,
-  "color_scheme": "Packages/Color Scheme - Default/Mac Classic.tmTheme",
+  "color_scheme": "Packages/User/Mac Classic (SL).tmTheme",
   "copy_with_empty_selection": false,
   "drag_text": false,
   "enable_telemetry": false,
@@ -11,6 +11,10 @@
   "font_size": 14,
   "highlight_line": true,
   "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
   "indent_guide_options":
   [
     "draw_active"
