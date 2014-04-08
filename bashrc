@@ -150,6 +150,8 @@ alias rr='rbenv rehash'
 alias rwhich='rbenv which'
 alias rwhence='rbenv whence'
 
+# Homebrew
+alias bud='brew update && brew doctor'
 
 # RVM
 # alias v='ruby -v;rails -v'
