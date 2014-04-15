@@ -104,6 +104,8 @@ alias cd.....='cd ../../../..; la'
 
 alias P="cd ~/Projects"
 alias D="cd ~/Downloads"
+alias DBC="cd ~/Projects/DBC"
+alias dot="cd ~/dotfiles"
 
 # Prevent headaches
 alias cp='cp -v'
