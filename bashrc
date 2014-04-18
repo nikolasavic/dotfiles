@@ -137,6 +137,11 @@ alias gba='git branch -a'
 alias gbr='git branch -r'
 alias gco='git checkout'
 alias gdel='git branch -D'
+alias glog='git log --graph --all --oneline --color --decorate=short'
+
+function ggrep () {
+  git log --oneline --all -i --grep=$1
+}
 
 # Tests
 alias rs='rspec spec'
