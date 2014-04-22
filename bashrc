@@ -118,6 +118,7 @@ alias gst='git status'
 alias gcam='git commit -am'
 alias gcm='git commit -m'
 alias gc='git commit'
+alias gca='git commit -a'
 alias ga='git add'
 alias gall='git add .'
 alias gcl='git clone'
@@ -130,6 +131,7 @@ alias gp='git push'
 alias gpo='git push origin'
 # alias gpom='git push origin master'
 # alias gpoi='git push origin integration'
+# alias gpod='git push origin development'
 alias gpp='git pull && git push'
 alias gl='git pull'
 alias glo='git pull origin'
@@ -139,6 +141,8 @@ alias gbr='git branch -r'
 alias gco='git checkout'
 alias gdel='git branch -D'
 alias glog='git log --graph --all --oneline --color --decorate=short'
+alias gmao="grep -lr \'<<<<<<<\' . | xargs git checkout --ours"
+alias gmat="grep -lr \'<<<<<<<\' . | xargs git checkout --theirs"
 
 function ggrep () {
   git log --oneline --all -i --grep=$1
