@@ -139,10 +139,10 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gbr='git branch -r'
 alias gco='git checkout'
+alias gcoo="git checkout --ours"
+alias gcot="git checkout --theirs"
 alias gdel='git branch -D'
 alias glog='git log --graph --all --oneline --color --decorate=short'
-alias gmao="grep -lr \'<<<<<<<\' . | xargs git checkout --ours"
-alias gmat="grep -lr \'<<<<<<<\' . | xargs git checkout --theirs"
 
 function ggrep () {
   git log --oneline --all -i --grep=$1
