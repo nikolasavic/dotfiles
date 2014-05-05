@@ -151,6 +151,15 @@ function ggrep () {
 # Tests
 alias rs='rspec spec'
 
+function r () {
+  if [ -z "$1" ]
+  then
+    ls spec/
+    return
+  fi
+  rspec spec/$1_spec.rb  
+}
+
 # Shell
 alias c='clear'
 alias q='exit'
