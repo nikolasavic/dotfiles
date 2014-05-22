@@ -53,6 +53,12 @@ PROMPT_COMMAND='__git_ps1 "\u:\h \w" " \$ "'
 # Functions
 ###
 
+# Make directory and cd into it
+mkcd () {
+    mkdir -p "${1}"
+    cd "${1}"
+}
+
 # List contents of directory upon moving into it
 function cdd {
   cd $1
@@ -157,7 +163,7 @@ function r () {
     ls spec/
     return
   fi
-  rspec spec/$1_spec.rb  
+  rspec spec/$1_spec.rb
 }
 
 # Shell
@@ -199,11 +205,11 @@ alias pg.status='pg_ctl status -D /usr/local/var/postgres'
 # Reference
 ###
 
-# The values in LSCOLORS are codes corresponding to different colors for 
-# different types of files. The letter you use indicates which color to use, 
+# The values in LSCOLORS are codes corresponding to different colors for
+# different types of files. The letter you use indicates which color to use,
 # and the position in the string indicates what type of file should be that color.
-# Each color comes in pairs – a foreground color and a background color. Here is 
-# a list of color values:  
+# Each color comes in pairs – a foreground color and a background color. Here is
+# a list of color values:
 
 # a = black
 # b = red
