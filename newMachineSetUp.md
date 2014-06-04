@@ -67,6 +67,11 @@ To see all known versions of ruby as well as the current version
 The following command will set directory command line completion to be case insensitive.   
 `echo set completion-ignore-case on | sudo tee -a /etc/inputrc`
 
+Install Unix commands
+
+	brew install tree
+	brew install ack
+
 ## Database
 **PostGreSQL**
     
