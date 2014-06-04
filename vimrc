@@ -1,8 +1,10 @@
-" Set parameters
+" General
+"""""""""""
+set history=250
 syntax on
 set ruler
 set ai				" auto indenting
-
+set number
 " Add jk to map to ESC
 inoremap jk <ESC>
 
