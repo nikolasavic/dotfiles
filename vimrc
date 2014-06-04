@@ -1,16 +1,28 @@
-" General
+" General "
 """""""""""
 set history=250
-syntax on
-set ruler
-set ai				" auto indenting
-set number
-" Add jk to map to ESC
-inoremap jk <ESC>
 
 " Remap leader to ,
 let mapleader = ","
 
+" Syntax highlighting
+syntax on
+
+" Always show current position
+set ruler
+
+" Auto indent
+set ai
+
+" Show line numbering
+set number
+
+" Add jk to map to ESC
+inoremap jk <ESC>
+
+
+" Plug Ins "
+""""""""""""
 " Pathogen
 execute pathogen#infect()
 
