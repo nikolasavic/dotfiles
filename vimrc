@@ -1,3 +1,8 @@
+" Set parameters
+syntax on
+set ruler
+set ai				" auto indenting
+
 " Add jk to map to ESC
 inoremap jk <ESC>
 
@@ -8,8 +13,8 @@ let mapleader = ","
 execute pathogen#infect()
 
 " NERDTree
-" Open nerdtree when vim starts
-autocmd vimenter * NERDTree
+" Open nerdtree when vim starts and no files were specified
+autocmd vimenter * if !argc() | NERDTree | endif
 
 " Open nerdtree with ctrl+n
 map <C-n> :NERDTreeToggle<CR>
