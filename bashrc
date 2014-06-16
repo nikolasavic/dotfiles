@@ -192,6 +192,7 @@ alias bud='brew update && brew doctor'
 # alias rgu='rvm gemset use'
 
 # Bundler Commands
+alias b='bundle'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bl='bundle list'
