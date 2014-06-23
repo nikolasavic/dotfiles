@@ -147,6 +147,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gbr='git branch -r'
 alias gco='git checkout'
+alias gcob='git checkout -b'
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias gdel='git branch -D'
