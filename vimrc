@@ -34,7 +34,9 @@ inoremap jk <ESC>
 
 " Display "
 """""""""""
-" Show trailing whitepace and spaces before a tab:
+" Show trailing whitespace
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Plug Ins "
