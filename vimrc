@@ -17,17 +17,8 @@ filetype indent on
 " Enable filetype-specific plugins
 filetype plugin on
 
-" Syntax highlighting
-syntax on
-
 " Always show current position
 set ruler
-
-" Auto indent
-set ai
-
-" Show line numbering
-set number
 
 " Add jk to map to ESC
 inoremap jk <ESC>
@@ -38,6 +29,15 @@ inoremap jk <ESC>
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" Syntax highlighting
+syntax on
+
+" Auto indent
+set ai
+
+" Show line numbering
+set number
 
 " Plug Ins "
 """"""""""""
