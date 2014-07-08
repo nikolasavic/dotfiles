@@ -54,5 +54,9 @@ map <C-n> :NERDTreeToggle<CR>
 " Close nerdtree if the only window left open is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Fugitive
+" Open git blame split  with ctrl+b
+map <C-b> :Gblame<CR>
+
 " Ruby "
 """"""""
