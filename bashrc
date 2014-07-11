@@ -158,7 +158,7 @@ function ggrep () {
 }
 
 # Tests
-alias rs='rspec spec'
+alias rs='bundle exec rspec spec'
 
 function r () {
   if [ -z "$1" ]
@@ -166,7 +166,7 @@ function r () {
     ls spec/
     return
   fi
-  rspec spec/$1_spec.rb
+  bundle exec rspec spec/$1_spec.rb
 }
 
 # Shell
