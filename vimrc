@@ -23,6 +23,9 @@ set ruler
 " Add jk to map to ESC
 inoremap jk <ESC>
 
+" Quick save
+noremap <Leader>s :update<CR>
+
 " Display "
 """""""""""
 " Show trailing whitespace
