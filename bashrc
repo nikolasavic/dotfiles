@@ -157,6 +157,9 @@ function ggrep () {
   git log --oneline --all -i --grep=$1
 }
 
+# Sinatra
+alias be_all='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
+
 # Tests
 alias rs='bundle exec rspec spec'
 
