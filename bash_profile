@@ -18,7 +18,7 @@ export PATH=/usr/local/bin:$PATH
 eval "$(rbenv init -)"
 
 # Sublime Text as default editor
-export EDITOR='subl -w'
+# export EDITOR='subl -w'
 
 # source ~/.bashrc
 [[ -s ~/.bashrc ]] && source ~/.bashrc
