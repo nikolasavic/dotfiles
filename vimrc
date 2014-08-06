@@ -28,19 +28,23 @@ noremap <Leader>s :update<CR>
 
 " Display "
 """""""""""
+" Show line numbering
+set number
+
+" Auto indent
+set ai
+
+" Syntax highlighting
+syntax on
+
 " Show trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-" Syntax highlighting
-syntax on
-
-" Auto indent
-set ai
-
-" Show line numbering
-set number
+" Highlight 81st column
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
 " Plug Ins "
 """"""""""""
