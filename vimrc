@@ -34,6 +34,15 @@ set number
 " Auto indent
 set ai
 
+" Always use spaces instead of tabs
+set expandtab
+
+" size of a hard tabstop
+set tabstop=2
+
+" size of an "indent"
+set shiftwidth=2
+
 " Syntax highlighting
 syntax on
 
