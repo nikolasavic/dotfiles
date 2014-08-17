@@ -55,6 +55,7 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
+
 " Plug Ins "
 """"""""""""
 " Pathogen
@@ -74,5 +75,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Open git blame split  with ctrl+b
 map <C-b> :Gblame<CR>
 
-" Ruby "
-""""""""
+" Rainbow Parenthesis always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
