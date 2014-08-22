@@ -5,3 +5,4 @@
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/Nikola/.gitignore_global
+	editor = /usr/bin/vim
