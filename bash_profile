@@ -5,11 +5,12 @@
 # This file is loaded before .bashrc
 # echo 'this is from .bash_profile'
 
-# /usr/local and its subdirectories are used for the installation of software and 
-# other files for use on the local machine. What this really means is that software 
+# /usr/local and its subdirectories are used for the installation of software and
+# other files for use on the local machine. What this really means is that software
 # that is not part of the official distribution (which usually goes in /usr/bin) goes here.
 
-export PATH=/usr/local/bin:$PATH
+# To support Racket Scheme Repl, /Applications/Racketv6.1/bin
+export PATH=/usr/local/bin:/Applications/Racketv6.1/bin:$PATH
 
 # Load RVM into a shell session *as a function*
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
