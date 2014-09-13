@@ -97,6 +97,12 @@ Add vim pluggins in ~/.vim/bundle/
      git clone https://github.com/tpope/vim-heroku.git
      git clone https://github.com/tpope/vim-commentary.git
 
+If vim-pathogen isnt infecting properly:
+
+    cd ~/.vim
+    mkdir autoload
+    cp pathogen.vim ~/.vim/autoload
+
 ### tmux
 *Install*
 
