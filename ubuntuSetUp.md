@@ -13,6 +13,7 @@ Documentation to set up a new Ubuntu droplet on Digital Ocean.
  - Installation
    * git
    * vim
+   * tmux
 
 ## Docs
 [unix-create-user-account](http://www.cyberciti.biz/faq/unix-create-user-account/)
@@ -76,3 +77,8 @@ or with individual commands
 *Install*
 
     sudo apt-get install vim
+
+### tmux
+*Install*
+
+    sudo apt-get install tmux
