@@ -10,6 +10,8 @@ This is a collection of dotfiles that I use to regulate my environment.
    * `cd dotfiles`
    * `chmod +x make_symlinks.sh`
    * `./make_symlinks.sh`
+   * `cd`
+   * `source .bashrc`
 
 **Notes**   
 Running the script will move any existing versions of the dotfiles into `~/dotfiles_old`
