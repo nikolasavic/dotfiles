@@ -78,6 +78,25 @@ or with individual commands
 
     sudo apt-get install vim
 
+Add vim pluggins in ~/.vim/bundle/
+     git clone https://github.com/scrooloose/nerdtree.git
+     git clone https://github.com/vim-scripts/paredit.vim.git
+     git clone https://github.com/tomtom/tlib_vim.git
+     git clone https://github.com/vim-scripts/tslime.vim.git
+     git clone https://github.com/kien/rainbow_parentheses.vi
+     git clone https://github.com/kien/rainbow_parentheses.vid
+     git clone https://github.com/tpope/vim-pathogen.git
+     git clone https://github.com/tpope/vim-rails.git
+     git clone https://github.com/tpope/vim-fugitive.git
+     git clone https://github.com/tpope/vim-endwise.git
+     git clone https://github.com/tpope/vim-surround.git
+     git clone https://github.com/tpope/vim-fireplace.git
+     git clone https://github.com/tpope/vim-dispatch.git
+     git clone https://github.com/tpope/vim-projectionist.git
+     git clone https://github.com/tpope/vim-bundler.git
+     git clone https://github.com/tpope/vim-heroku.git
+     git clone https://github.com/tpope/vim-commentary.git
+
 ### tmux
 *Install*
 
