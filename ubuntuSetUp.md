@@ -14,12 +14,15 @@ Documentation to set up a new Ubuntu droplet on Digital Ocean.
    * git
    * vim
    * tmux
+   * curl, ruby & nodejs
 
 ## Docs
-[unix-create-user-account](http://www.cyberciti.biz/faq/unix-create-user-account/)
-[initial-server-setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04)
-[edit-sudoers-file](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
-[git-installation](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-12-04)
+[unix-create-user-account](http://www.cyberciti.biz/faq/unix-create-user-account/)  
+[initial-server-setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04)  
+[edit-sudoers-file](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)  
+[git-installation](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-12-04)  
+[install-ruby-and-rails](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-12-04-lts-with-rbenv--2)  
+
 
 ### Adding users & passwords
 
@@ -107,3 +110,6 @@ If vim-pathogen isnt infecting properly:
 *Install*
 
     sudo apt-get install tmux
+
+### curl, ruby & nodejs
+
