@@ -108,10 +108,13 @@ alias cd...='cd ../..; la'
 alias cd....='cd ../../..; la'
 alias cd.....='cd ../../../..; la'
 
+# Frequent destinations
 alias P="cd ~/Projects"
 alias D="cd ~/Downloads"
-alias DBC="cd ~/Projects/DBC"
+alias desk="cd ~/Desktop"
+alias dbc="cd ~/Projects/DBC"
 alias dot="cd ~/dotfiles"
+alias cdvim="cd ~/.vim"
 
 # Prevent headaches
 alias cp='cp -v'
