@@ -12,6 +12,9 @@
 # To support Racket Scheme Repl, /Applications/Racketv6.1/bin
 export PATH=/usr/local/bin:/Applications/Racketv6.1/bin:$PATH
 
+# Add Heroku Toolbelt
+export PATH=/usr/local/heroku/bin:$PATH
+
 # Load RVM into a shell session *as a function*
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
