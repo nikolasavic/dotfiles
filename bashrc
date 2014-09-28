@@ -31,8 +31,8 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 
 # Sets colors for ls, see below for color reference chart
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-# export LSCOLORS="xxxxxxxxxxxxxxxxxxxxxx"
+export LSCOLORS="exfxcxdxbxegedabagacad"
+#export LSCOLORS="exgxbxDxCxEgEdxbxgxcxd"
 export CLICOLOR=1
 
 ##
