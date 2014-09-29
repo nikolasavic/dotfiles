@@ -23,6 +23,9 @@ source ~/.git-completion.sh
 # export IRCHOST="yourValue"
 # export USER="yourValue"
 
+# grep options
+export GREP_OPTIONS='--color=always'
+
 # Globals for .git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWCOLORHINTS=true
