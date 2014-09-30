@@ -116,6 +116,7 @@ alias P="cd ~/Projects"
 alias D="cd ~/Downloads"
 alias desk="cd ~/Desktop"
 alias dbc="cd ~/Projects/DBC"
+alias dev="cd ~/Projects/DBC/dev"
 alias dot="cd ~/dotfiles"
 alias cdvim="cd ~/.vim"
 
