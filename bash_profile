@@ -10,7 +10,7 @@
 # that is not part of the official distribution (which usually goes in /usr/bin) goes here.
 
 # To support Racket Scheme Repl, /Applications/Racketv6.1/bin
-export PATH=/usr/local/bin:/Applications/Racketv6.1/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # Add Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
