@@ -9,9 +9,6 @@
 # other files for use on the local machine. What this really means is that software
 # that is not part of the official distribution (which usually goes in /usr/bin) goes here.
 
-# To support Racket Scheme Repl, /Applications/Racketv6.1/bin
-export PATH=/usr/local/bin:$PATH
-
 # Add Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
