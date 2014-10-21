@@ -12,6 +12,10 @@
 # Add Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
+# Golang
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$GOPATH/bin
+
 # Load RVM into a shell session *as a function*
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
