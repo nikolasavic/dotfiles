@@ -25,6 +25,10 @@ inoremap jk <ESC>
 
 " Quick save
 noremap <Leader>s :update<CR>
+noremap <Leader>w :update<CR>
+
+" Quick leave
+noremap <Leader>q :q!<CR>
 
 " Display "
 """""""""""
