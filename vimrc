@@ -60,6 +60,17 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 
+" Toggle between relative and absolute numbering
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+map <C-g> :call NumberToggle()<cr>
+
 " Plug Ins "
 """"""""""""
 " Pathogen
