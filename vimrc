@@ -32,8 +32,9 @@ noremap <Leader>q :q!<CR>
 
 " Display "
 """""""""""
-" Show line numbering
+" Show line numbering and color white
 set number
+:highlight LineNr ctermfg=white
 
 " Auto indent
 set ai
