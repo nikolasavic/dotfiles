@@ -54,6 +54,12 @@ syntax on
 " Highlight currentline
 set cursorline
 
+" Highlight search
+set hlsearch
+
+" Incremental search
+set incsearch
+
 " Show trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
