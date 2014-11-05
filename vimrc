@@ -51,6 +51,9 @@ set shiftwidth=2
 " Syntax highlighting
 syntax on
 
+" Highlight currentline
+set cursorline
+
 " Show trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
