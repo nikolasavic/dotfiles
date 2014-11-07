@@ -1,12 +1,12 @@
 " General "
 """""""""""
+" We're running Vim, not Vi!
+set nocompatible
+
 set history=250
 
 " Remap leader to ,
 let mapleader = ","
-
-" We're running Vim, not Vi!
-set nocompatible
 
 " Enable filetype detection
 filetype on
