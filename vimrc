@@ -56,6 +56,7 @@ set cursorline
 
 " Highlight search
 set hlsearch
+:highlight Search ctermbg=Green ctermfg=Black
 
 " Incremental search
 set incsearch
