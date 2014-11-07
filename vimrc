@@ -42,6 +42,9 @@ set ai
 " Always use spaces instead of tabs
 set expandtab
 
+" Display incomplete commands
+set showcmd
+
 " size of a hard tabstop
 set tabstop=2
 
