@@ -61,6 +61,9 @@ set cursorline
 set hlsearch
 :highlight Search ctermbg=Green ctermfg=Black
 
+" This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
 " Incremental search
 set incsearch
 
