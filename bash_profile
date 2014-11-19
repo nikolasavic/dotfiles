@@ -9,6 +9,9 @@
 # other files for use on the local machine. What this really means is that software
 # that is not part of the official distribution (which usually goes in /usr/bin) goes here.
 
+# Add User bin
+export PATH=/Users/Nikola/bin:$PATH
+
 # Add Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
