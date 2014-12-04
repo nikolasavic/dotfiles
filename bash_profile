@@ -20,6 +20,10 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
 
+# CUDA
+export PATH=/Developer/NVIDIA/CUDA-6.5/bin:$PATH
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-6.5/lib:$DYLD_LIBRARY_PATH
+
 # Load RVM into a shell session *as a function*
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
