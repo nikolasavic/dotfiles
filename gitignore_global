@@ -104,7 +104,6 @@ com_crashlytics_export_strings.xml
 *.sassc
 .sass-cache
 capybara-*.html
-.rspec
 /log
 /tmp
 /db/*.sqlite3
@@ -120,6 +119,12 @@ config/secrets.yml
 ## Environment normalisation:
 /.bundle
 /vendor/bundle
+
+## Vim
+*.swp
+
+# Misc
+/ignore/
 
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
