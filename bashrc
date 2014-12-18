@@ -99,6 +99,9 @@ function extract () {
 # Aliases
 ###
 
+# Find
+alias findn='find . -name'
+
 # File System
 alias sl='ls'
 alias l='ls'
