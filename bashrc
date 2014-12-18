@@ -175,7 +175,7 @@ function ggrep () {
 }
 
 # Sinatra
-alias beall='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
+alias bxall='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
 
 # Tests
 alias rs='bundle exec rspec spec'
@@ -221,7 +221,7 @@ alias bud='brew update && brew doctor'
 
 # Bundler Commands
 alias b='bundle'
-alias be='bundle exec'
+alias bx='bundle exec'
 alias bi='bundle install'
 alias bl='bundle list'
 alias bu='bundle update'
