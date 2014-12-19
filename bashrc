@@ -190,7 +190,7 @@ function r () {
 }
 
 # Shell
-alias c='clear'
+alias k='clear'
 alias q='exit'
 alias sourcedot='source ~/.bashrc'
 
