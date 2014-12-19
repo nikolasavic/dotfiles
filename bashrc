@@ -63,7 +63,7 @@ mkcd () {
 }
 
 # List contents of directory upon moving into it
-function cdd {
+function c {
   cd $1
   ls
 }
