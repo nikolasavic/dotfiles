@@ -210,6 +210,10 @@ alias rwhence='rbenv whence'
 # Homebrew
 alias bud='brew update && brew doctor'
 
+# Ubuntu/Debian apt-get
+alias sagu='sudo apt-get update'
+alias sagi='sudo apt-get install'
+
 # RVM
 # alias v='ruby -v;rails -v'
 # alias rl='rvm list'
