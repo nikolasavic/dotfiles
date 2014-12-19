@@ -115,13 +115,13 @@ alias cd....='cd ../../..; la'
 alias cd.....='cd ../../../..; la'
 
 # Frequent destinations
-alias P="cd ~/Projects"
-alias D="cd ~/Downloads"
-alias desk="cd ~/Desktop"
-alias dbc="cd ~/Projects/DBC"
-alias dev="cd ~/Projects/DBC/dev"
-alias dot="cd ~/dotfiles"
-alias cdvim="cd ~/.vim"
+alias P="cd ~/Projects; ls"
+alias D="cd ~/Downloads; ls"
+alias desk="cd ~/Desktop; ls"
+alias dbc="cd ~/Projects/DBC; ls"
+alias dev="cd ~/Projects/DBC/dev; ls"
+alias dot="cd ~/dotfiles; ls"
+alias cdvim="cd ~/.vim; ls"
 
 # Prevent headaches
 alias cp='cp -v'
