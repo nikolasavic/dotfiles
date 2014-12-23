@@ -99,7 +99,8 @@ function extract () {
 # Aliases
 ###
 
-# Find
+# Unix
+alias j='jobs'
 alias findn='find . -name'
 
 # File System
