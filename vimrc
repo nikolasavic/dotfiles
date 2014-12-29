@@ -57,6 +57,9 @@ syntax on
 " Highlight currentline
 set cursorline
 
+" Scroll off
+set scrolloff=3
+
 " Highlight search
 set hlsearch
 :highlight Search ctermbg=Green ctermfg=Black
