@@ -216,6 +216,9 @@ alias bud='brew update && brew doctor'
 alias sagu='sudo apt-get update'
 alias sagi='sudo apt-get install'
 
+# Grunt
+alias grt='grunt'
+
 # RVM
 # alias v='ruby -v;rails -v'
 # alias rl='rvm list'
