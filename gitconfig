@@ -6,3 +6,5 @@
 [core]
 	excludesfile = /Users/Nikola/.gitignore_global
 	editor = /usr/bin/vim
+[push]
+	default = simple
