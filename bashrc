@@ -188,16 +188,8 @@ function ggrep () {
 alias bxall='bx rake db:drop && bx rake db:create && bx rake db:migrate && bx rake db:seed'
 
 # Tests
+alias r='bundle exec rspec'
 alias rs='bundle exec rspec spec'
-
-function r () {
-  if [ -z "$1" ]
-  then
-    ls spec/
-    return
-  fi
-  bundle exec rspec spec/$1_spec.rb
-}
 
 # Shell
 alias k='clear'
