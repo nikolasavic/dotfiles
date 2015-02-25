@@ -184,6 +184,10 @@ function ggrep () {
   git log --oneline --all -i --grep=$1
 }
 
+
+# Rails
+alias rc='rails console'
+
 # ActiveRecord
 alias bxall='bx rake db:drop && bx rake db:create && bx rake db:migrate && bx rake db:seed'
 
