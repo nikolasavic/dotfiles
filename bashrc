@@ -175,6 +175,7 @@ alias gcob='git checkout -b'
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias gdel='git branch -D'
+alias grdel='git push origin --delete'
 alias glog='git log --graph --all --oneline --color --decorate=short'
 
 function ggrep () {
