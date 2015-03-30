@@ -160,11 +160,15 @@ alias greia='git rebase -i --autosquash'
 alias grea='git rebase --abort'
 alias grec='git rebase --continue'
 alias gres='git rebase --skip'
+
+# Reset
 alias gr='git reset'
 alias grp='git reset -p'
 alias grh='git reset --hard'
 alias grhh='git reset --hard HEAD'
 alias gclear='gall; git reset --hard HEAD'
+
+# Push/Pull
 alias gp='git push'
 alias gpo='git push origin'
 alias gpfo='git push --force origin'
@@ -174,6 +178,7 @@ alias gpfo='git push --force origin'
 alias gpp='git pull && git push'
 alias gl='git pull'
 alias glo='git pull origin'
+
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbr='git branch -r'
