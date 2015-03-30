@@ -42,7 +42,7 @@ export CLICOLOR=1
 # Command line prompt
 ###
 
-PROMPT_COMMAND='__git_ps1 "\u:\h \w" " \$ "'
+PROMPT_COMMAND='__git_ps1 "$UWhite$BIWhite\u:\h \w$Color_Off" " \$ "'
 # Looks like:
 # Nikola:Caspar ~/dotfiles (master) $
 
