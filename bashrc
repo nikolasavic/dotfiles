@@ -130,6 +130,7 @@ alias rm='rm -v'
 alias mv='mv -v'
 
 # Git
+
 alias g='git'
 alias gs='git status'
 alias gst='git status'
@@ -140,7 +141,6 @@ alias gcf='git commit --fixup'
 alias gcv='git commit -v'
 alias gca='git commit -va'
 alias ga='git add'
-alias gaa='git add .'
 alias gau='git add -u .'
 alias gall='git add -A .'
 alias gac='gall; gcv'
