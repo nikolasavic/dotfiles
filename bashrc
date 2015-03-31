@@ -171,6 +171,8 @@ alias gclear='gall; git reset --hard HEAD'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpfo='git push --force origin'
+
+alias gph='git push heroku'
 # alias gpom='git push origin master'
 # alias gpoi='git push origin integration'
 # alias gpod='git push origin development'
