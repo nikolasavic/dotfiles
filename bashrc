@@ -130,7 +130,6 @@ alias rm='rm -v'
 alias mv='mv -v'
 
 # Git
-
 alias g='git'
 alias gs='git status'
 alias gst='git status'
