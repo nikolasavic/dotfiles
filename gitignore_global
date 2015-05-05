@@ -122,6 +122,7 @@ config/secrets.yml
 
 ## Vim
 *.swp
+tags
 
 # Misc
 /ignore/
