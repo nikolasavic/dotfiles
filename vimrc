@@ -28,6 +28,7 @@ noremap <Leader>s :update<CR>
 noremap <Leader>S :wa<CR>
 noremap <Leader>q :q!<CR>
 noremap <Leader>Q :qa!<CR>
+noremap <Leader>w :wq!<CR>
 noremap <Leader>W :wqa!<CR>
 
 " Display "
