@@ -6,7 +6,7 @@ set nocompatible
 set history=250
 
 " Remap leader to ,
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Enable filetype detection
 filetype on
