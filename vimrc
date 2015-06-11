@@ -20,8 +20,6 @@ filetype plugin on
 " Always show current position
 set ruler
 
-" Add jk to map to ESC
-inoremap jk <ESC>
 
 " Quick save
 noremap <Leader>s :update<CR>
