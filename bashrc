@@ -133,24 +133,34 @@ alias mv='mv -v'
 alias g='git'
 alias gs='git status'
 alias gst='git status'
-alias gcam='git commit -am'
-alias gcm='git commit -m'
-alias gc='git commit'
-alias gcf='git commit --fixup'
-alias gcv='git commit -v'
-alias gca='git commit -va'
+alias gcl='git clone'
+alias gfo='git fetch origin'
+
+alias gd='git diff'
+alias gdc='git diff --cached'
+
+alias gm='git merge'
+alias gms='git merge --squash'
+
+alias gsh='git stash'
+alias gshp='git stash pop'
+
+# Add
 alias ga='git add'
 alias gau='git add -u .'
 alias gall='git add -A .'
 alias gac='gall; gcv'
 alias gap='ga -p'
+
+# Commit
+alias gcam='git commit -am'
+alias gcm='git commit -m'
+alias gc='git commit'
+alias gcf='git commit --fixup'
+alias gcam='git commit --ammend'
+alias gcv='git commit -v'
+alias gca='git commit -va'
 alias gcp='gcv -p'
-alias gcl='git clone'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gm='git merge'
-alias gms='git merge --squash'
-alias gfo='git fetch origin'
 
 # Rebase
 alias gre='git rebase'
@@ -180,6 +190,7 @@ alias gpp='git pull && git push'
 alias gl='git pull'
 alias glo='git pull origin'
 
+# Branches
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbr='git branch -r'
@@ -189,12 +200,12 @@ alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias gdel='git branch -D'
 alias grdel='git push origin --delete'
+
 alias glog='git log --graph --all --oneline --color --decorate=short'
 
 function ggrep () {
   git log --oneline --all -i --grep=$1
 }
-
 
 # Rails
 alias rc='rails console'
