@@ -20,6 +20,8 @@ filetype plugin on
 " Always show current position
 set ruler
 
+" Hide unsaved buffers
+set hidden
 
 " Quick save
 noremap <Leader>s :update<CR>
