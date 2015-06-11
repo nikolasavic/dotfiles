@@ -34,7 +34,6 @@ noremap <Leader>W :wqa!<CR>
 """""""""""
 " Show line numbering and color white
 set number
-":highlight LineNr ctermfg=white
 
 " Auto indent
 set ai
