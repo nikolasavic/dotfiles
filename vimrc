@@ -23,12 +23,12 @@ set ruler
 " Hide unsaved buffers
 set hidden
 
-" Quick save
+" Quick save and leave
 noremap <Leader>s :update<CR>
-noremap <Leader>w :update<CR>
-
-" Quick leave
+noremap <Leader>S :wa<CR>
 noremap <Leader>q :q!<CR>
+noremap <Leader>Q :qa!<CR>
+noremap <Leader>W :wqa!<CR>
 
 " Display "
 """""""""""
