@@ -23,6 +23,9 @@ set ruler
 " Hide unsaved buffers
 set hidden
 
+" Fix console vim colors
+set t_Co=256
+
 " Quick save and leave
 noremap <Leader>s :update<CR>
 noremap <Leader>S :wa<CR>

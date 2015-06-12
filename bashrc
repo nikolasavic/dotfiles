@@ -153,11 +153,11 @@ alias gac='gall; gcv'
 alias gap='ga -p'
 
 # Commit
-alias gcam='git commit -am'
 alias gcm='git commit -m'
 alias gc='git commit'
 alias gcf='git commit --fixup'
-alias gcam='git commit --ammend'
+alias gcaam='git add .;git commit --amend'
+alias gcam='git commit --amend'
 alias gcv='git commit -v'
 alias gca='git commit -va'
 alias gcp='gcv -p'
