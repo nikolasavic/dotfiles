@@ -47,6 +47,7 @@ config/secrets.yml
 /vendor/bundle
 
 ## Vim
+*.swo
 *.swp
 tags
 
