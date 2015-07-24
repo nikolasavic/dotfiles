@@ -19,6 +19,8 @@ source ~/.git-completion.sh
 # Environmental Variables
 ###
 
+export EDITOR='vim'
+
 # IRC
 # export IRCHOST="yourValue"
 # export USER="yourValue"
@@ -221,6 +223,9 @@ alias rs='bundle exec rspec spec'
 alias k='clear'
 alias q='exit'
 alias sourcedot='source ~/.bashrc'
+
+# Vim
+alias ct='ctags -R .'
 
 # Tmux
 alias tls='tmux ls'
