@@ -1,30 +1,12 @@
-" General "
-"""""""""""
-" We're running Vim, not Vi!
+let mapleader = "\<Space>" " Remap leader to ,
 set nocompatible
-
 set history=250
+set ruler                  " Always show current position
+set hidden                 " Hide unsaved buffers
 
-" Remap leader to ,
-let mapleader = "\<Space>"
-
-" Enable filetype detection
-filetype on
-
-" Enable filetype-specific indenting
-filetype indent on
-
-" Enable filetype-specific plugins
-filetype plugin on
-
-" Always show current position
-set ruler
-
-" Hide unsaved buffers
-set hidden
-
-" Fix console vim colors
-set t_Co=256
+filetype on                " Enable filetype detection
+filetype indent on         " Enable filetype-specific indenting
+filetype plugin on         " Enable filetype-specific plugins
 
 " Quick save and leave
 noremap <Leader>s :update<CR>
@@ -34,54 +16,44 @@ noremap <Leader>Q :qa!<CR>
 noremap <Leader>w :wq!<CR>
 noremap <Leader>W :wqa!<CR>
 
+" Pathogen
+execute pathogen#infect()
+
 " Display "
 """""""""""
-" Show line numbering and color white
-set number
+colorscheme solarized
+set t_Co=256
+let g:solarized_termcolors=16
+set background=dark
 
-" Auto indent
-set ai
+syntax on        " Syntax highlighting
+set number       " Show line numbering and color white
+set ai           " Auto indent
+set expandtab    " Always use spaces instead of tabs
+set showcmd      " Display incomplete commands
+set tabstop=2    " size of a hard tabstop
+set shiftwidth=2 " size of an "indent"
+set cursorline   " Highlight currentline
+set scrolloff=3  " Scroll off
+set hlsearch     " Highlight search
+set incsearch    " Incremental search
+set mouse=a      " >< mouse!
 
-" Always use spaces instead of tabs
-set expandtab
-
-" Display incomplete commands
-set showcmd
-
-" size of a hard tabstop
-set tabstop=2
-
-" size of an "indent"
-set shiftwidth=2
-
-" Syntax highlighting
-syntax on
-
-" Highlight currentline
-set cursorline
-
-" Scroll off
-set scrolloff=3
-
-" Highlight search
-set hlsearch
-:highlight Search ctermbg=Green ctermfg=Black
-
-" This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
-
-" Incremental search
-set incsearch
+" Ruby
+iabbrev ppry require 'pry'; binding.pry
+iabbrev rpry logger.info("\n*********\nPRY DEBUG\n*********\n"); require 'pry-remote'; binding.remote_pry
 
 " Show trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-" Highlight 81st column
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
+" This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
 
+" Highlight 81st column
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%81v', 100)
 
 " Toggle between relative and absolute numbering
 function! NumberToggle()
@@ -94,9 +66,8 @@ endfunc
 
 map <C-g> :call NumberToggle()<cr>
 
-" Movement "
+" Quicker Window Movement
 """"""""""""
-" Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -104,15 +75,12 @@ nnoremap <C-l> <C-w>l
 
 " Plug Ins "
 """"""""""""
-" Pathogen
-execute pathogen#infect()
-
 " NERDTree
 " Open nerdtree when vim starts and no files were specified
 autocmd vimenter * if !argc() | NERDTree | endif
 
-" Open nerdtree with ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>    " Open NerdTree with ctrl+n
+map <leader>r :NERDTreeFind<cr>  " Open NerdTree in directory of current file
 
 " Close nerdtree if the only window left open is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
