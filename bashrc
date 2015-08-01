@@ -120,6 +120,7 @@ alias cd.....='cd ../../../..; la'
 # Frequent destinations
 alias P="cd ~/Projects; ls"
 alias D="cd ~/Downloads; ls"
+alias C="cd ~/Projects/c; ls"
 alias desk="cd ~/Desktop; ls"
 alias dbc="cd ~/Projects/DBC; ls"
 alias dev="cd ~/Projects/DBC/dev; ls"
