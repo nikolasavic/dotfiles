@@ -19,6 +19,13 @@ noremap <Leader>W :wqa!<CR>
 " Pathogen
 execute pathogen#infect()
 
+" 'scooloose/syntastic'
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_always_populate_loc_list = 1
+
+" Respect the .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
+
 " Display "
 """""""""""
 colorscheme solarized
