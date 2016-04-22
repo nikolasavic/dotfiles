@@ -22,6 +22,9 @@ source ~/.git-completion.sh
 export EDITOR='vim'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
 # IRC
 # export IRCHOST="yourValue"
 # export USER="yourValue"
