@@ -74,3 +74,5 @@ tags
 # Misc
 /ignore/
 
+# Powder/Pow
+.powrc

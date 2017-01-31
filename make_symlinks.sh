@@ -13,7 +13,7 @@ dir=~/dotfiles           # dotfiles directory
 olddir=~/dotfiles_old    # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files="bashrc bash_profile profile gitconfig gitignore_global git-completion.sh git-prompt.sh vimrc zshrc tmux.conf"
+files="bashrc bash_profile profile gitconfig gitignore_global git-completion.sh git-prompt.sh vimrc zshrc tmux.conf emacs"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"

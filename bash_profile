@@ -15,11 +15,6 @@ export PATH=/Users/Nikola/bin:$PATH
 # Add Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
-# Golang
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/Projects/go
-export PATH=$PATH:$GOPATH/bin
-
 # Postgess.app
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
