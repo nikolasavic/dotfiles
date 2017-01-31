@@ -125,6 +125,7 @@ alias cd.....='cd ../../../..; la'
 alias P="cd ~/Projects; ls"
 alias D="cd ~/Downloads; ls"
 alias C="cd ~/Projects/c; ls"
+alias G="cd ~/Projects/gtech; ls"
 alias desk="cd ~/Desktop; ls"
 alias dbc="cd ~/Projects/DBC; ls"
 alias dev="cd ~/Projects/DBC/dev; ls"
@@ -139,6 +140,7 @@ alias mv='mv -v'
 # Git
 alias g='git'
 alias gs='git status'
+alias gsho='git show'
 alias gst='git status'
 alias gcl='git clone'
 alias gfo='git fetch origin'
@@ -166,7 +168,7 @@ alias gcf='git commit --fixup'
 alias gcaam='git add .;git commit --amend'
 alias gcam='git commit --amend'
 alias gcv='git commit -v'
-alias gca='git commit -va'
+alias gcva='git commit -va'
 alias gcp='gcv -p'
 
 # Rebase
@@ -176,6 +178,8 @@ alias greia='git rebase -i --autosquash'
 alias grea='git rebase --abort'
 alias grec='git rebase --continue'
 alias gres='git rebase --skip'
+alias gcoo="git checkout --ours"
+alias gcot="git checkout --theirs"
 
 # Reset
 alias gr='git reset'
@@ -203,8 +207,6 @@ alias gba='git branch -a'
 alias gbr='git branch -r'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gcoo="git checkout --ours"
-alias gcot="git checkout --theirs"
 alias gdel='git branch -D'
 alias grdel='git push origin --delete'
 
