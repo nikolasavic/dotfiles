@@ -20,6 +20,9 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
 
+# Postgess.app
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
 # Load RVM into a shell session *as a function*
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
