@@ -101,6 +101,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug '/usr/local/opt/fzf'
 call plug#end()
 
+" vim-autoformat
+noremap <leader>f :Autoformat<CR>
+
+let g:formatterpath = ['~/.gem/ruby/2.3.1/gems/rubocop-0.47.1/bin/']
+
 " 'scooloose/syntastic'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_always_populate_loc_list = 1
