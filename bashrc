@@ -238,13 +238,6 @@ alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tkill='tmux kill-session -t'
 
-# RBenv
-alias rv='rbenv versions'
-alias rl='rbenv local'
-alias rr='rbenv rehash'
-alias rwhich='rbenv which'
-alias rwhence='rbenv whence'
-
 # Homebrew
 alias bud='brew update && brew doctor'
 
@@ -254,15 +247,6 @@ alias sagi='sudo apt-get install'
 
 # Grunt
 alias grt='grunt'
-
-# RVM
-# alias v='ruby -v;rails -v'
-# alias rl='rvm list'
-# alias ru='rvm use'
-# alias rgl='rvm gemset list'
-# alias rgc='rvm gemset create'
-# alias rgd='rvm gemset delete'
-# alias rgu='rvm gemset use'
 
 # Bundler Commands
 alias b='bundle'
