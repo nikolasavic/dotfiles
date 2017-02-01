@@ -89,7 +89,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'Chiel92/vim-autoformat'
 
 " nerdtree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 
 " ag.vim
 Plug 'rking/ag.vim'
