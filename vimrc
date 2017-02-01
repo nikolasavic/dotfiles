@@ -104,7 +104,13 @@ call plug#end()
 " vim-autoformat
 noremap <leader>f :Autoformat<CR>
 
-let g:formatterpath = ['~/.gem/ruby/2.3.1/gems/rubocop-0.47.1/bin/']
+let g:formatterpath = ['~/.gem/ruby/2.3.1/gems/rubocop-0.47.1/bin/',
+                     \ '/usr/local/opt/llvm/bin']
+
+" C autoformat with Clang-format
+" https://clang.llvm.org/docs/ClangFormat.html
+let g:formatdef_c_autoformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=\"{BasedOnStyle: Google}\"'"
+let g:formatters_c = ['c_autoformat']
 
 " 'scooloose/syntastic'
 let g:syntastic_javascript_checkers = ['eslint']
