@@ -6,7 +6,7 @@ This is a collection of dotfiles that I use to regulate my environment.
 
 ### Installation
 
-   * `git clone https://github.com/Nikola-/Dotfiles.git`
+   * `git clone https://github.com/nikolasavic/Dotfiles.git`
    * `cd dotfiles`
    * `chmod +x make_symlinks.sh`
    * `./make_symlinks.sh`
