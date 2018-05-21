@@ -29,10 +29,8 @@ nnoremap <C-l> <C-w>l
 
 " Display
 """""""""
-colorscheme solarized
 set t_Co=256
-let g:solarized_termcolors=16
-set background=dark
+set background=light
 
 set number       " Show line numbering and color white
 set ai           " Auto indent
@@ -58,24 +56,12 @@ nnoremap <CR> :noh<CR><CR>
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
 
-" Toggle between relative and absolute numbering
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set nornu
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-map <C-g> :call NumberToggle()<cr>
-
 " Plug Ins
 """"""""""
 call plug#begin('~/.vim/plugged')
 " <3 tpope
 " vim-fugitive
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
@@ -94,7 +80,6 @@ Plug 'scrooloose/nerdtree'
 " ag.vim
 Plug 'rking/ag.vim'
 
-" ctrl-p
 Plug 'ctrlpvim/ctrlp.vim'
 
 " fzf
@@ -107,21 +92,11 @@ noremap <leader>f :Autoformat<CR>
 let g:formatterpath = ['~/.gem/ruby/2.3.1/gems/rubocop-0.47.1/bin/',
                      \ '/usr/local/opt/llvm/bin']
 
-" C autoformat with Clang-format
-" https://clang.llvm.org/docs/ClangFormat.html
-let g:formatdef_c_autoformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=\"{BasedOnStyle: Google}\"'"
-let g:formatters_c = ['c_autoformat']
-
 " 'scooloose/syntastic'
-let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_always_populate_loc_list = 1
 
 " Respect the .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-
-" Ruby
-iabbrev ppry require 'pry'; binding.pry
-iabbrev rpry logger.info("\n*********\nPRY DEBUG\n*********\n"); require 'pry-remote'; binding.remote_pry
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>    " Open NerdTree with ctrl+n

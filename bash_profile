@@ -10,19 +10,22 @@
 # that is not part of the official distribution (which usually goes in /usr/bin) goes here.
 
 # Add User bin
-export PATH=/Users/Nikola/bin:$PATH
+export PATH=/Users/nsavic/bin:$PATH
 
-# Add Heroku Toolbelt
-export PATH=/usr/local/heroku/bin:$PATH
+# Git Completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-# Postgess.app
-export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
-
-# Sublime Text as default editor
-# export EDITOR='subl -w'
-
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+# Git Prompt
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
 
 # source ~/.bashrc
 [[ -s ~/.bashrc ]] && source ~/.bashrc
+
+# This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Sourcing
+# source ~/dotfiles/local/dot_test.sh

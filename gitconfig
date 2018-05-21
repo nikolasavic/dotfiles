@@ -1,10 +1,13 @@
 [user]
 	name = Nikola Savic
 	email = nikolasavic@gmail.com
-[credential]
-	helper = osxkeychain
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --graph --all --oneline --color --decorate=short
+
 [core]
-	excludesfile = /Users/Nikola/.gitignore_global
-	editor = /usr/bin/vim
-[push]
-	default = simple
+	excludesfile = /Users/nsavic/.gitignore_global
