@@ -7,7 +7,7 @@ mkcd () {
 # List contents of directory upon moving into it
 function c {
   cd $1
-  ls
+  ls -G
 }
 
 # one command to extract them all...

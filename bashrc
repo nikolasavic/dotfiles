@@ -15,10 +15,10 @@ source ~/dotfiles/local/dot_bash_functions.sh
 export EDITOR='vim'
 
 # File System
-alias sl='ls'
-alias l='ls'
-alias la='ls -aF'
-alias lsa='ls -laF'
+alias l='ls -G'
+alias ls='ls -G'
+alias la='ls -aGF'
+alias lsa='ls -laGF'
 alias ..='cd ..; ls'
 alias ...='cd ../..'
 
