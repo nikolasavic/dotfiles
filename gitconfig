@@ -10,4 +10,4 @@
   hist = log --graph --all --oneline --color --decorate=short
 
 [core]
-	excludesfile = /Users/nsavic/.gitignore_global
+	excludesfile = /Users/nikolasavic/.gitignore_global
