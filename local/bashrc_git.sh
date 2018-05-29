@@ -23,12 +23,10 @@ alias ga='git add'
 alias gall='git add -A .'
 
 # Commit
-alias gc='git commit'
+alias gc='git commit -v'
 alias gcm='git commit -m'
 alias gcf='git commit --fixup'
 alias gcam='git commit --amend'
-alias gcv='git commit -v'
-alias gcp='gcv -p'
 
 # Rebase
 alias gre='git rebase'
