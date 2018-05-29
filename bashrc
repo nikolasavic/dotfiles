@@ -7,9 +7,9 @@
 
 # Sourcing
 # source ~/dotfiles/local/dot_test.sh
-source ~/dotfiles/local/dot_git.sh
-source ~/dotfiles/local/dot_ruby.sh
-source ~/dotfiles/local/dot_bash_functions.sh
+source ~/dotfiles/local/bashrc_git.sh
+source ~/dotfiles/local/bashrc_ruby.sh
+source ~/dotfiles/local/bashrc_functions.sh
 
 # Environmental Variables
 export EDITOR='vim'
@@ -25,6 +25,8 @@ alias ...='cd ../..'
 # Frequent destinations
 alias P="cd ~/Projects; ls"
 alias cddesk="cd ~/Desktop; ls"
+alias cddown="cd ~/Downloads; ls"
+alias cddrop="cd ~/Dropbox; ls"
 alias cddot="cd ~/dotfiles; ls"
 alias cdvim="cd ~/.vim; ls"
 

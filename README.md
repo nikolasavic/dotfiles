@@ -1,5 +1,4 @@
 # Dotfiles
-===========
 
 ### About
 This is a collection of dotfiles that I use to regulate my environment.
@@ -17,3 +16,7 @@ This is a collection of dotfiles that I use to regulate my environment.
 Running the script will move any existing versions of the dotfiles into `~/dotfiles_old`
 and then add symlinks to the files in `~/dotfiles`.  To undo changes, delete `~/dotfiles`
 and move all the files in `~/dotfiles_old` to `~/`.
+
+** Setup scripts **   
+The setup scripts in `./bin` need to be granted execute privileges with:
+`chmod +x ./bin/basic_setup.sh`

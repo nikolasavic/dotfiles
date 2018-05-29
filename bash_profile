@@ -9,23 +9,11 @@
 # other files for use on the local machine. What this really means is that software
 # that is not part of the official distribution (which usually goes in /usr/bin) goes here.
 
-# Add User bin
-export PATH=/Users/nsavic/bin:$PATH
+# Basic setup
+source ~/dotfiles/local/bash_profile_basic.sh
 
-# Git Completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
-# Git Prompt
-if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
-  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
-fi
-
-# source ~/.bashrc
-[[ -s ~/.bashrc ]] && source ~/.bashrc
-
-# This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# RVM
+source ~/dotfiles/local/bash_profile_rvm.sh
 
 # Sourcing
 # source ~/dotfiles/local/dot_test.sh
