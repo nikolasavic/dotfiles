@@ -5,6 +5,7 @@ set nocompatible
 set history=250
 set ruler                  " Always show current position
 set hidden                 " Hide unsaved buffers
+set noswapfile             " No swap files
 
 syntax on                  " Syntax highlighting
 filetype on                " Enable filetype detection
