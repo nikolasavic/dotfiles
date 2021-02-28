@@ -12,8 +12,5 @@
 # Basic setup
 source ~/dotfiles/local/bash_profile_basic.sh
 
-# RVM
-source ~/dotfiles/local/bash_profile_rvm.sh
-
 # Sourcing
 # source ~/dotfiles/local/dot_test.sh
