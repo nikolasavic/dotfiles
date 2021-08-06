@@ -1,1 +1,15 @@
-echo "Hello yadm bootstap!"
+#!/bin/sh
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Linux" ]; then
+  # Linux
+  echo "Running Linux Bootstrap...."
+  echo "Done!"
+fi
+
+if [ "$system_type" = "Darwin" ]; then
+  # Mac OS
+  echo "Running Mac OS Bootstrap...."
+  echo "Done!"
+fi
