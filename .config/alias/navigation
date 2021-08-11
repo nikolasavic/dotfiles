@@ -1,0 +1,10 @@
+# Directory navigation
+alias l="ls -F"
+alias la="ls -aF"
+alias ll="ls -lah"
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Favorites
+alias P="cd $HOME/Projects"
+alias D="cd $HOME/Downloads"
