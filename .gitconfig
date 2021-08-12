@@ -1,3 +1,6 @@
 [user]
 	email = nikolasavic@fastmail.com
 	name = Nikola Savic
+
+[pull]
+	rebase = true
