@@ -1,9 +1,9 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+Config { font = "xft:Ubuntu Nerd Font:weight=bold:pixelsize=16:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "black"
        , border = TopB
-       , bgColor = "black"
-       , fgColor = "grey"
+       , bgColor = "#2f1e2e"
+       , fgColor = "#a39e9b"
        , alpha = 255
        , position = Top
        , textOffset = -1
@@ -12,27 +12,17 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , pickBroadest = False
        , persistent = False
        , hideOnStart = False
-       , iconRoot = "."
+       , iconRoot = "/home/nikola/.config/xpm/"
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "EGPF" ["-t","<station>: <tempC>C",
-                                          "-L","18","-H","25",
-                                          "--normal","green",
-                                          "--high","red",
-                                          "--low","lightblue"] 36000
-                    , Run Network "eth0" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
-                    , Run Network "eth1" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","3","-H","50",
+       , commands = [ Run Cpu ["-L","3","-H","50",
                                "--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
-                    , Run Com "uname" ["-s","-r"] "" 36000
-                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Date "%a %b %_d %Y %H:%M:%S   <fn=0>\xfbae</fn>" "date" 10
+                    , Run Com "/home/nikola/.local/bin/pacman-updates.sh" [] "pacupdate" 36000
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% }\
-                    \{ <fc=#ee9a00>%date%</fc>| %EGPF% | %uname%"
+       , template = " <icon=haskell.xpm/>  %cpu%   %memory% }\
+                    \{ %date% : %pacupdate%   "
        }
