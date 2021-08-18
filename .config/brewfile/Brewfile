@@ -3,6 +3,7 @@ brew brew-file
 brew git
 brew gnu-indent
 brew jenv
+brew lsd
 brew pipx
 brew pyenv
 brew sbt

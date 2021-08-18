@@ -1,7 +1,12 @@
 # Directory navigation
-alias l="ls -F"
-alias la="ls -aF"
-alias ll="ls -lah"
+
+# If LSDeluxe is installed
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias ll="ls -la"
+alias lt='ls --tree'
+
 alias ..="cd .."
 alias ...="cd ../.."
 
