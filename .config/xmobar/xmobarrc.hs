@@ -17,9 +17,14 @@ Config {
        , allDesktops = True
        , overrideRedirect = True
        , commands = [
-                      Run Cpu [ "--template", "   <fn=0>\xe238</fn>    Cpu:<total>" ] 10
+                      Run Cpu [ "--template", "   <fn=0>\xe238</fn>    Cpu: <total>" ] 10
 
-                    , Run Memory [ "--template","Mem: <usedratio>%" ] 10
+                    , Run Memory [ "--template", "Mem: <usedratio>%" ] 10
+
+                    , Run MultiCoreTemp ["--"
+                                        ,"--mintemp", "20"
+                                        ,"--maxtemp", "95"
+                                        ] 50
 
                     , Run Date "<fn=0>\xf073</fn> %_W  %a %b %_d %Y   %I:%M:%S %p  <fn=0>\xfbae</fn>" "date" 10
 
@@ -27,6 +32,6 @@ Config {
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %cpu%   %memory% }\
+       , template = " %cpu%   %memory%   %multicoretemp%}\
                     \{ %date% : %pacupdate%   "
        }
