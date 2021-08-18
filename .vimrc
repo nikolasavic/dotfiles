@@ -42,5 +42,9 @@ set shiftwidth=2                      " Size of indent
 set expandtab                         " Use spaces instead of tabs
 set autoindent                        " Auto indent
 
+" Trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 " Netrw
 command! LL Lexplore | vert res 40
