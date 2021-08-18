@@ -1,0 +1,22 @@
+# Homebrew packages
+brew brew-file
+brew git
+brew gnu-indent
+brew jenv
+brew pipx
+brew pyenv
+brew sbt
+brew scala
+brew starship
+brew tree
+brew yadm
+
+# Other Cask applications
+cask docker
+
+# Nerd Fonts
+tap homebrew/cask-fonts
+cask font-hack-nerd-font
+cask font-inconsolata-nerd-font
+cask font-iosevka-nerd-font
+cask font-mononoki-nerd-font
