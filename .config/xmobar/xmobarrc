@@ -15,14 +15,13 @@ Config { font = "xft:Ubuntu Nerd Font:weight=bold:pixelsize=16:antialias=true:hi
        , iconRoot = "/home/nikola/.config/xpm/"
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Cpu ["-L","3","-H","50",
-                               "--normal","green","--high","red"] 10
+       , commands = [ Run Cpu ["-L","3","-H","50", "--normal","green","--high","red", "-t", "   <fn=0>\xe238</fn>    Cpu:<total>"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S   <fn=0>\xfbae</fn>" "date" 10
-                    , Run Com "/home/nikola/.local/bin/pacman-updates.sh" [] "pacupdate" 36000
+                    , Run Com "/home/nikola/.local/bin/pacman/num-updates.sh" [] "pacupdate" 36000
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <icon=haskell.xpm/>  %cpu%   %memory% }\
+       , template = " %cpu%   %memory% }\
                     \{ %date% : %pacupdate%   "
        }
