@@ -51,7 +51,7 @@ myLayout = avoidStruts $ smartBorders myDefaultLayout
 myWorkspaces            = [" home ", " sys "]
 
 main = do
-  xmproc <- spawnPipe "xmobar -x 0 /home/nikola/.config/xmobar/xmobarrc"
+  xmproc <- spawnPipe "xmobar -x 0 /home/nikola/.config/xmobar/xmobarrc.hs"
   xmonad $ docks defaults
 
 defaults = def {
