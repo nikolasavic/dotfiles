@@ -12,7 +12,7 @@ if [[ $? != 0 ]]; then
 fi
 echo "*\$* Homebrew file installed"
 
-# Brewfile install 
+# Brewfile install
 echo "*\$* Installing Brewfile"
 brew file install
 
