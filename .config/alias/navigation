@@ -11,5 +11,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # Favorites
-alias P="cd $HOME/Projects"
+alias C="cd $HOME/.config"
+alias L="cd $HOME/.local"
 alias D="cd $HOME/Downloads"
+alias P="cd $HOME/Projects"
