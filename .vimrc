@@ -39,6 +39,7 @@ nnoremap <CR> :noh<CR><CR>            " Unsets "last search pattern" with <ENTER
 
 " Spacing
 set shiftwidth=2                      " Size of indent
+set tabstop=2                         " Size of tab
 set expandtab                         " Use spaces instead of tabs
 set autoindent                        " Auto indent
 
