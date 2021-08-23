@@ -5,6 +5,8 @@ set nocompatible                      " Keeps you safe from unexpected things yo
 set hidden                            " Allows you to re-use the same window and switch from an unsaved buffer without saving first.
 set noswapfile                        " More annoying than mosquitos
 set history=512                       " 2 ** 9
+set encoding=utf-8
+scriptencoding utf-8
 
 " Appearance
 syntax on                             " Syntax highlighting
@@ -44,8 +46,8 @@ set expandtab                         " Use spaces instead of tabs
 set autoindent                        " Auto indent
 
 " Trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+set listchars=trail:·,tab:,nbsp:␣
+set list
 
 " Netrw
 command! LL Lexplore | vert res 40
