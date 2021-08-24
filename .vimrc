@@ -46,7 +46,7 @@ set expandtab                         " Use spaces instead of tabs
 set autoindent                        " Auto indent
 
 " Trailing whitespace
-set listchars=trail:·,tab:,nbsp:␣
+set listchars=trail:·,tab:ﲖ-,nbsp:␣
 set list
 
 " Netrw
