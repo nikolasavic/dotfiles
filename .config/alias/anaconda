@@ -1,0 +1,2 @@
+alias jupyter-notebook=/usr/local/anaconda3/bin/jupyter-notebook
+alias black=/usr/local/anaconda3/bin/black
