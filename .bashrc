@@ -1,7 +1,8 @@
 # Alias
 source $HOME/.config/alias/navigation
 
-# XDG
+# Env
+source $HOME/.config/env/defaults
 source $HOME/.config/env/xdg
 
 # Starship Prompt
