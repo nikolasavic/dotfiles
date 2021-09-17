@@ -254,6 +254,24 @@ note:
 * requires nerd fonts
 * re-run to update
 
+### Update markdown mime type to text
+to view markdown files as text in browser
+```
+.local/share/mime/packages/text-markdown.xml
+--------------------------------------------
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="text/plain">
+    <glob pattern="*.md"/>
+    <glob pattern="*.mkd"/>
+    <glob pattern="*.markdown"/>
+  </mime-type>
+</mime-info>
+```
+then run `update-mime-database ~/.local/share/mine`
+
+reference: https://superuser.com/questions/696361/how-to-get-the-markdown-viewer-addon-of-firefox-to-work-on-linux
+
 ### Keyboard modifiers
 to avoid losing keyboard layout and mappings when switching keyboard with usb
 ```
