@@ -197,7 +197,7 @@ reference:
 ### Keyboard modifiers
 to avoid losing keyboard layout and mappings when switching keyboard with usb  
 ```
-localectl --no-convert set-x11-keymap us caps:ctrl_modifier,altwin:swap_alt_win
+localectl --no-convert set-x11-keymap us "" "" terminate:ctrl_alt_bksp,caps:ctrl_modifier,altwin:swap_alt_win
 ```
 
 you can verify the results in this file
@@ -205,10 +205,14 @@ you can verify the results in this file
 ```
 /etc/X11/xorg.conf.d/00-keyboard.conf
 -------------------------------------
+# Written by systemd-localed(8), read by systemd-localed and Xorg. It's
+# probably wise not to edit this file manually. Use localectl(1) to
+# instruct systemd-localed to update it.
 Section "InputClass"
         Identifier "system-keyboard"
         MatchIsKeyboard "on"
-        Option "XkbOptions" "caps:ctrl_modifier, altwin:swap_alt_win"
+        Option "XkbLayout" "us"
+        Option "XkbOptions" "terminate:ctrl_alt_bksp,caps:ctrl_modifier,altwin:swap_alt_win"
 EndSection
 ```
 
