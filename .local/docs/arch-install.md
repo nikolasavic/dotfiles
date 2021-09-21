@@ -1,13 +1,15 @@
-## Arch Install
+# Arch Install
 
-### Overview
+## Overview
 This is a guide to install Arch linux using systemd-boot and systemd-networkd for a wired ethernet connection.
+
+## Minimum Install
 
 ### Partition and Format Disk
 1. list partitions  
    `lsblk`
 
-1. gdisk is a GPT (GUID partition table) manipulator  
+1. use gdisk to write to the  GPT (GUID partition table)  
    `gdisk /dev/nvme0n1`
 
 1. create filesystems on the partitions:
@@ -36,22 +38,9 @@ This is a guide to install Arch linux using systemd-boot and systemd-networkd fo
 install linux and essential packages  
 `pacstrap /mnt base linux linux-firmware amd-ucode vim`
 
-
 ### Generate Filesystem Table
 generate a fstab file, use `-U` for UUID or `-L` for labels  
 `genfstab -U /mnt >> /mnt/etc/fstab`
-
-### Shared partition _(Optional)_
-to mount a shared data partition for use on multiple distros
-
-1. edit `/etc/fstab`  
-   `UUID=<shared parition uuid> /mnt/shared ext4 defaults 0 0`
-
-1. change permissions of the mount point `/mnt/shared`  
-   `cd /mnt`  
-   `sudo chown nikola shared/`  
-   `sudo chgrp nikola shared/`  
-   `sudo chmod 751 shared/`
 
 ### Chroot
 change root to new system  
@@ -108,41 +97,7 @@ change root to new system
 1. give full root priveleges  
    `echo "nikola ALL=(ALL) ALL >> etc/sudoers.d/nikola"`
 
-### Initramfs
-for early loading of nvidia module
-
-1. edit `vim /etc/mkinitcpio.conf` and add nvidia in module
-1. `mkinitcpio -p linux`
-
-note: don't forget to run `mkinitcpio` every time there is a driver update or automate with pacman hook:  
-
-```
-/etc/pacman.d/hooks/nvidia.hook
--------------------------------
-[Trigger]
-Operation=Install
-Operation=Upgrade
-Operation=Remove
-Type=Package
-Target=nvidia
-Target=linux
-# Change the linux part above and in the Exec line if a different kernel is used
-
-[Action]
-Description=Update Nvidia module in initcpio
-Depends=mkinitcpio
-When=PostTransaction
-NeedsTargets
-Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
-```
-
-reference:
-
-* https://wiki.archlinux.org/title/NVIDIA
-* https://wiki.archlinux.org/title/Mkinitcpio#Configuration
-
 ### Systemd-boot
-
 1. install systemd-boot  
    `bootctl install`
 
@@ -157,9 +112,53 @@ reference:
    options  root=...
    ```
 
-1. when referring to your partition, there is a difference between UUID assigned by your filesystem and partition UUID
-   `ls -al /dev/disk/by-uuid`  
-   `ls -al /dev/disk/by-partuuid`  
+_note: when referring to your partition, there is a difference between UUID assigned by your filesystem and partition UUID_
+* `ls -al /dev/disk/by-uuid`
+* `ls -al /dev/disk/by-partuuid`
+
+### Restart
+1. exit chroot  
+   `exit`
+
+1. unmount all  
+   `umount -R /mnt`
+
+1. restart  
+   `sudo restart`
+
+## Post-Install Customization
+
+### Install base packages
+* `efibootmgr`
+* `base-devel`
+* `git`
+* `linux-headers`
+* `nvidia`, `nvidia-utils` & `nvidia-settings`
+* `pacman-contrib`
+* `alacritty`
+* `xorg` & `xorg-xinit`
+* `xmonad`, `xmonad-contrib`
+* `xmobar`
+* `picom`
+* `nitrogen`
+* `dmenu`
+* `lsd`
+* `tree`
+* `htop`
+* `neofetch`
+* `firefox`
+
+### Shared partition _(Optional)_
+to mount a shared data partition for use on multiple distros
+
+1. edit `/etc/fstab`  
+   `UUID=<shared parition uuid> /mnt/shared ext4 defaults 0 0`
+
+1. change permissions of the mount point `/mnt/shared`  
+   `cd /mnt`  
+   `sudo chown nikola shared/`  
+   `sudo chgrp nikola shared/`  
+   `sudo chmod 751 shared/`
 
 ### Multi-Boot Linux _(Optional)_
 1. mount `ESP` to `/mnt/efi`
@@ -195,36 +194,23 @@ reference:
 * https://wiki.archlinux.org/title/EFI_system_partition
 * https://ramsdenj.com/2016/04/15/multi-boot-linux-with-one-boot-partition.html
 
-### Restart
-1. exit chroot  
-   `exit`
+### Keyboard modifiers
+to avoid losing keyboard layout and mappings when switching keyboard with usb  
+```
+localectl --no-convert set-x11-keymap us caps:ctrl_modifier,altwin:swap_alt_win
+```
 
-1. unmount all  
-   `umount -R /mnt`
+you can verify the results in this file
 
-1. restart  
-   `sudo restart`
-
-### Install base packages
-* `efibootmgr`
-* `reflector`
-* `base-devel`
-* `git`
-* `linux-headers`
-* `nvidia`, `nvidia-utils` & `nvidia-settings`
-* `pacman-contrib`
-* `alacritty`
-* `xorg` & `xorg-xinit`
-* `xmonad`, `xmonad-contrib`
-* `xmobar`
-* `picom`
-* `nitrogen`
-* `dmenu`
-* `lsd`
-* `tree`
-* `htop`
-* `neofetch`
-* `firefox`
+```
+/etc/X11/xorg.conf.d/00-keyboard.conf
+-------------------------------------
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbOptions" "caps:ctrl_modifier, altwin:swap_alt_win"
+EndSection
+```
 
 ### Install `yay`
 1. `cd /opt`
@@ -244,6 +230,45 @@ reference:
 1. Nerd Fonts
 
    1. `yay -Syu nerd-fonts-complete`
+
+### Initramfs
+for early loading of nvidia module
+
+1. edit `vim /etc/mkinitcpio.conf` and add nvidia in module
+1. `mkinitcpio -p linux`
+
+note: don't forget to run `mkinitcpio` every time there is a driver update or automate with pacman hook:  
+
+```
+/etc/pacman.d/hooks/nvidia.hook
+-------------------------------
+[Trigger]
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia
+Target=linux
+# Change the linux part above and in the Exec line if a different kernel is used
+
+[Action]
+Description=Update Nvidia module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+```
+
+reference:
+
+* https://wiki.archlinux.org/title/NVIDIA
+* https://wiki.archlinux.org/title/Mkinitcpio#Configuration
+
+### Reflector Config
+* install reflector  
+  `sudo pacman -Sy reflector`
+* enable reflector timer  
+  `systemctl enable reflector.timer`
 
 ### Starship Prompt
 install with  
@@ -272,30 +297,8 @@ then run `update-mime-database ~/.local/share/mine`
 
 reference: https://superuser.com/questions/696361/how-to-get-the-markdown-viewer-addon-of-firefox-to-work-on-linux
 
-### Setup Mullvad VPN (wireguard)
+### Setup Mullvad VPN (wireguard) WIP
 install wireguard package, `wireguard-tools`
 
 reference: https://wiki.archlinux.org/title/Mullvad
-
-### Keyboard modifiers
-to avoid losing keyboard layout and mappings when switching keyboard with usb  
-```
-localectl --no-convert set-x11-keymap us caps:ctrl_modifier,altwin:swap_alt_win
-```
-
-you can verify the results in this file
-
-```
-/etc/X11/xorg.conf.d/00-keyboard.conf
--------------------------------------
-Section "InputClass"
-        Identifier "system-keyboard"
-        MatchIsKeyboard "on"
-        Option "XkbOptions" "caps:ctrl_modifier, altwin:swap_alt_win"
-EndSection
-```
-
-### Systemd
-* enable reflector timer  
-  `systemctl enable reflector.timer`
 
