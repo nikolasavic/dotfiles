@@ -272,8 +272,19 @@ then run `update-mime-database ~/.local/share/mine`
 
 reference: https://superuser.com/questions/696361/how-to-get-the-markdown-viewer-addon-of-firefox-to-work-on-linux
 
+### Setup Mullvad VPN (wireguard)
+install wireguard package, `wireguard-tools`
+
+reference: https://wiki.archlinux.org/title/Mullvad
+
 ### Keyboard modifiers
-to avoid losing keyboard layout and mappings when switching keyboard with usb
+to avoid losing keyboard layout and mappings when switching keyboard with usb  
+```
+localectl --no-convert set-x11-keymap us caps:ctrl_modifier,altwin:swap_alt_win
+```
+
+you can verify the results in this file
+
 ```
 /etc/X11/xorg.conf.d/00-keyboard.conf
 -------------------------------------
