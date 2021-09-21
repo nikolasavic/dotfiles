@@ -116,15 +116,15 @@ _note: when referring to your partition, there is a difference between UUID assi
 * `ls -al /dev/disk/by-uuid`
 * `ls -al /dev/disk/by-partuuid`
 
-### Restart
+### Reboot
 1. exit chroot  
    `exit`
 
 1. unmount all  
    `umount -R /mnt`
 
-1. restart  
-   `sudo restart`
+1. reboot  
+   `sudo reboot`
 
 ## Post-Install Customization
 
