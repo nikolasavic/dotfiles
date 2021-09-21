@@ -212,6 +212,13 @@ Section "InputClass"
 EndSection
 ```
 
+### TRIM
+TRIM optimizes performance and ensures the longevity of your SSD drive by minimizing write amplification.
+
+* `sudo systemctl status fstrim.timer`
+* `sudo systemctl enable fstrim.timer`
+* `sudo systemctl start fstrim.timer`
+
 ### Install `yay`
 1. `cd /opt`
 1. `sudo git clone https://aur.archlinux.org/yay.git`
