@@ -4,7 +4,7 @@ echo "*\$* Refreshing package database"
 sudo pacman -Syy
 
 echo "*\$* Installing packages"
-sudo pacman -S - < arch-pkglist.txt
+sudo pacman -S --needed - < ~/.local/bin/arch-pkglist.txt
 
 echo "*\$* Installing prompt"
 # Starship Promt

@@ -16,7 +16,9 @@ openssh
 pacman-contrib
 picom
 reflector
+systemd-resolvconf
 tree
+wireguard-tools
 xmobar
 xmonad
 xmonad-contrib
