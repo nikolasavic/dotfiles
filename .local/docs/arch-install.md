@@ -103,13 +103,13 @@ change root to new system
 
 1. edit loader config in `/boot/loader/loader.conf`
 
-1. create entries in `/boot/loader/entries/`
+1. create entries in `/boot/loader/entries/`, the resume UUID is for hibernation support and references the swap partition
    ```
    title    Arch
    linux    /vmlinuz-linux
    initrd   /amd-ucode.img
    initrd   /initramfs-linux.img
-   options  root=...
+   options  root="LABEL=arch" rw resume=UUID=xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
    ```
 
 _note: when referring to your partition, there is a difference between UUID assigned by your filesystem and partition UUID_
@@ -242,10 +242,15 @@ TRIM optimizes performance and ensures the longevity of your SSD drive by minimi
 
    1. `yay -Syu nerd-fonts-complete`
 
-### Initramfs
-for early loading of nvidia module
+### Initramfs Hooks and Modules
+edit `vim /etc/mkinitcpio.conf`
 
-1. edit `vim /etc/mkinitcpio.conf` and add nvidia in module
+1. early loading of nvidia module  
+   `MODULES=(nvidia)`
+
+1. hibernation support, add `resume`  
+   `HOOKS=(base udev autodetect modconf block filesystems keyboard fsck resume)`
+
 1. `mkinitcpio -p linux`
 
 note: don't forget to run `mkinitcpio` every time there is a driver update or automate with pacman hook:  
