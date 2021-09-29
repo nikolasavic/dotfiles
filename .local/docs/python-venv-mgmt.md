@@ -5,12 +5,20 @@
 * `python -m pip` executes the module `pip` using the interpreter `python`, which could be installed globally or in a virtual env
 * never use `pip` directly to install packages because you don't want to install them globally and it's unclear where they will be installed
 * even if you use a virtual environment, `python -m pip` makes it explicit
+* upgrade  
+  `python -m pip install --upgrade pip`
 
 #### ensurepip
 * pip is an independent project with it's own release cycle
 * `python -m ensurepip --upgrade` will verify or install pip into the `python` installation
 
 #### pipx
+* install  
+  `python -m pip install --user pipx`
+* upgrade  
+  `python -m pip install --user -U pipx`
+* default installation is `~/.local/bin`  
+  `python -m pipx ensurepath`
 * pipx allows you to install python programs and run them from the command line, i.e. `black` or `flake8`, and each tool gets it's own virtual environment
 * you can use pipx to install a package in a virtual env, run the command once and then delete the environment leaving no trace  
   `pipx run glances`  
