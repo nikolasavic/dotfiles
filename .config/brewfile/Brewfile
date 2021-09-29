@@ -13,7 +13,6 @@ brew tree
 brew yadm
 
 # Other Cask applications
-cask anaconda
 cask docker
 
 # Nerd Fonts
