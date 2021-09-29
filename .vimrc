@@ -50,4 +50,8 @@ set listchars=trail:·,tab:-,nbsp:␣
 set list
 
 " Netrw
-command! LL Lexplore | vert res 40
+function! ToggleVExplorer()
+  Lexplore
+  vertical resize 30
+endfunction
+map <silent> <C-N> :call ToggleVExplorer()<CR>
