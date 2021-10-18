@@ -313,14 +313,16 @@ then run `update-mime-database ~/.local/share/mine`
 
 reference: https://superuser.com/questions/696361/how-to-get-the-markdown-viewer-addon-of-firefox-to-work-on-linux
 
-### Setup Mullvad VPN (wireguard) WIP
+### Setup Mullvad VPN (wireguard)
 setup Mullvad VPN directly with wireguard configuration
 
 * ensure you have `wireguard-tools` & `systemd-resolvconf` installed
 * Use https://mullvad.net/en/account/#/wireguard-config/ to create and downlaod a wireguard conf file
 * move mullvad config to `/etc/wireguard`
-* set up VPN connection  
-  `wg-quick up mkvd-usxxx`
+* to set up one-time VPN connection  
+  `wg-quick up mlvd-usxxx`
+* to set up repeating on start-up VPN connection  
+  `sudo systemctl enable wg-quick@mlvd-usxxx`
 
 reference:
 * https://wiki.archlinux.org/title/Mullvad
