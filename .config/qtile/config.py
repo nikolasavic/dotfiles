@@ -9,8 +9,8 @@ import subprocess
 
 mod = "mod4"
 terminal = "alacritty"
-normal_border = "#646464"  # Dove Gray
-focus_border = "#5543aa"   # Gigas
+GRAY = "#646464"  # Dove Gray
+GIGAS = "#5543aa" # Gigas
 
 @hook.subscribe.startup_once
 def autostart():
@@ -57,8 +57,8 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 ]
 
-workspace_name = {"1": "DEV", "2": "WEB", "3": "SYS"}
-groups = [Group(i, label=workspace_name[i]) for i in "123"]
+workspace_name = {"1": "DEV", "2": "WEB", "3": "SYS", "4": "AUX"}
+groups = [Group(i, label=workspace_name[i]) for i in "1234"]
 for i in groups:
     keys.extend([
         # mod1 + letter of group = switch to group
@@ -75,8 +75,8 @@ for i in groups:
     ])
 
 layouts = [
-    layout.MonadTall(border_focus=focus_border, border_width=3),
-    layout.MonadWide(border_focus=focus_border, border_width=3),
+    layout.MonadTall(border_focus=GIGAS, border_width=3, margin=7),
+    layout.MonadWide(border_focus=GIGAS, border_width=3, margin=7),
     layout.Max(),
     # layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=4),
     # layout.Stack(num_stacks=2),
@@ -90,9 +90,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Ubuntu Nerd Font',
-    fontsize=16,
-    padding=7,
+    font='Hack Nerd Font',
+    fontsize=15,
+    padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -100,10 +100,11 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.TextBox(""),
-                widget.GroupBox(),
-                widget.Prompt(),
+                widget.TextBox(" ", fontsize=25),
+                widget.GroupBox(borderwidth=2, inactive=GRAY, this_current_screen_border='fffff0', this_screen_border='f0f0f0'),
                 widget.Sep(),
+                widget.Spacer(length=15),
+                widget.Prompt(),
                 widget.WindowName(),
                 widget.CheckUpdates(custom_command="checkupdates", display_format="{updates}:ﮮ"),
                 widget.ThermalSensor(),
@@ -112,6 +113,7 @@ screens = [
                 widget.QuickExit(default_text="", countdown_format="{}"),
             ],
             24,
+            opacity=0.7
         ),
     ),
 ]
@@ -139,4 +141,4 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
 auto_minimize = True
-wmname = "LG3D"
+wmname = "Qtile"
