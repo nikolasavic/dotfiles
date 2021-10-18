@@ -3,11 +3,21 @@ from typing import List
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
+from libqtile import hook
+import os
+import subprocess
 
 mod = "mod4"
 terminal = "alacritty"
 normal_border = "#646464"  # Dove Gray
 focus_border = "#5543aa"   # Gigas
+
+@hook.subscribe.startup_once
+def autostart():
+    # Dont forget to chmod +x autostart.sh
+    home = os.path.expanduser('~')
+    subprocess.Popen([home + '/.config/qtile/autostart.sh'])
+
 
 keys = [
     # Switch between windows
