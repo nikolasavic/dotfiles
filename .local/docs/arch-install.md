@@ -137,8 +137,7 @@ _note: when referring to your partition, there is a difference between UUID assi
 * `pacman-contrib`
 * `alacritty`
 * `xorg` & `xorg-xinit`
-* `xmonad`, `xmonad-contrib`
-* `xmobar`
+* `qtile`
 * `picom`
 * `nitrogen`
 * `dmenu`
