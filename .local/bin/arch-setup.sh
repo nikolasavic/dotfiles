@@ -6,9 +6,14 @@ sudo pacman -Syy
 echo "*\$* Installing packages"
 sudo pacman -S --needed - < ~/.local/bin/arch-pkglist.txt
 
-echo "*\$* Installing prompt"
 # Starship Promt
+echo "*\$* Installing prompt"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+# vim-plug
+echo "*\$* Installing vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "*\$* Arch Setup complete!"
 

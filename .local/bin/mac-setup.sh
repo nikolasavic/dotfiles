@@ -16,4 +16,9 @@ echo "*\$* Homebrew file installed"
 echo "*\$* Installing Brewfile"
 brew file install
 
+# vim-plug
+echo "*\$* Installing vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo "*\$* MacOS Setup complete!"
