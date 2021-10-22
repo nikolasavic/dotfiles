@@ -142,6 +142,8 @@ _note: when referring to your partition, there is a difference between UUID assi
 * `nitrogen`
 * `dmenu`
 * `lsd`
+* `fd`
+* `fzf`
 * `tree`
 * `htop`
 * `neofetch`

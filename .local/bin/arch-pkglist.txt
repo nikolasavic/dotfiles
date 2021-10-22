@@ -7,6 +7,8 @@ firefox
 git
 htop
 lsd
+fd
+fzf
 neofetch
 nitrogen
 nvidia
@@ -19,8 +21,6 @@ reflector
 systemd-resolvconf
 tree
 wireguard-tools
-xmobar
-xmonad
-xmonad-contrib
+qtile
 xorg
 xorg-xinit
