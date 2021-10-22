@@ -37,7 +37,7 @@ set ignorecase                        " Case insensitive search,
 set smartcase                         " except when using capitals
 set hlsearch                          " Highlight search results after <ENTER>
 set incsearch                         " Highlight all pattern matches while typing
-nnoremap <CR> :noh<CR><CR>            " Unsets "last search pattern" with <ENTER>
+nnoremap <CR> :noh<CR><CR>            " Unsets last search pattern with <ENTER>
 
 " Spacing
 set shiftwidth=2                      " Size of indent
@@ -55,3 +55,12 @@ function! ToggleVExplorer()
   vertical resize 30
 endfunction
 map <silent> <C-N> :call ToggleVExplorer()<CR>
+
+" vim plug
+call plug#begin()
+
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
