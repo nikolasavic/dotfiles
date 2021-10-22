@@ -17,13 +17,19 @@ https://github.com/junegunn/fzf/wiki
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   ```
-* usage:
+* vim usage:
   * search files  
     `Files`
   * search lines in loaded buffers  
     `Lines`
   * list all commands, default, assigned and plugin  
     `Commands`
+* terminal usage:
+  * fuzzy completion:  
+    `some-cmd <ctrl-t>`  
+    `some-cmd **<TAB>`
+  * history search  
+    `<ctrl-r>`
 
 ### Misc.
 #### Terminal mode

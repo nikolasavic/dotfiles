@@ -1,3 +1,23 @@
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# keybindings and autocompletion
+system_type=$(uname -s)
+if [[ "$system_type" == "Linux" ]]; then
+  # Linux
+fi
+
+if [[ "$system_type" == "Darwin" ]]; then
+  # Mac
+  if [[ "$SHELL" == "/bin/zsh" ]]; then
+    # zsh
+    [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+    source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+  fi
+  if [[ "$SHELL" == "/bin/bash" ]]; then
+    # bash
+    [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
+    source "/usr/local/opt/fzf/shell/key-bindings.bash"
+  fi
+fi
