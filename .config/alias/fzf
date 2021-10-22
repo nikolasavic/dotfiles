@@ -1,0 +1,8 @@
+# FZF
+
+alias fzfp="fzf --preview 'cat {}'"
+
+vf ()
+{
+  vim $(fzfp)
+}

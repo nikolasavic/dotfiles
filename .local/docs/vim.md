@@ -2,7 +2,8 @@
 
 ### Plugins
 #### vim-plug
-https://github.com/junegunn/vim-plug
+https://github.com/junegunn/vim-plug  
+
 * download and install in `.vim/autoload/`  
   ```
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -10,7 +11,8 @@ https://github.com/junegunn/vim-plug
   ```
 
 #### FZF & FZF.vim
-https://github.com/junegunn/fzf.vim
+https://github.com/junegunn/fzf.vim  
+https://github.com/junegunn/fzf/wiki  
 * ```
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'

@@ -4,6 +4,8 @@ brew git
 brew gnu-indent
 brew jenv
 brew lsd
+brew fzf
+brew fd
 brew pipx
 brew pyenv
 brew sbt
