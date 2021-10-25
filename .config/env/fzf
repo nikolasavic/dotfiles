@@ -6,6 +6,16 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 system_type=$(uname -s)
 if [[ "$system_type" == "Linux" ]]; then
   # Linux
+  if [[ "$SHELL" == "/bin/zsh" ]]; then
+    # zsh
+    source "/usr/share/fzf/completion.zsh" 2> /dev/null
+    source "/usr/share/fzf/key-bindings.zsh"
+  fi
+  if [[ "$SHELL" == "/bin/bash" ]]; then
+    # bash
+    source "/usr/share/fzf/completion.bash" 2> /dev/null
+    source "/usr/share/fzf/key-bindings.bash"
+  fi
 fi
 
 if [[ "$system_type" == "Darwin" ]]; then
