@@ -49,12 +49,8 @@ set autoindent                        " Auto indent
 set listchars=trail:·,tab:-,nbsp:␣
 set list
 
-" Netrw
-function! ToggleVExplorer()
-  Lexplore
-  vertical resize 30
-endfunction
-map <silent> <C-N> :call ToggleVExplorer()<CR>
+" Nerdtree
+nnoremap <C-n> :NERDTree<CR>
 
 " vim plug
 call plug#begin()
@@ -62,5 +58,8 @@ call plug#begin()
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Nerd Tree
+Plug 'preservim/nerdtree'
 
 call plug#end()
