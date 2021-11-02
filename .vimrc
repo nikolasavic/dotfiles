@@ -9,6 +9,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 " Appearance
+set background=dark                   " Let vim know the terminal bg color
 syntax on                             " Syntax highlighting
 set ruler                             " Always show current position
 set number                            " Line numbering
@@ -49,8 +50,11 @@ set autoindent                        " Auto indent
 set listchars=trail:·,tab:-,nbsp:␣
 set list
 
+" FZF
+map <Leader>f :FZF<CR>
+
 " Nerdtree
-nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " vim plug
 call plug#begin()
@@ -61,5 +65,11 @@ Plug 'junegunn/fzf.vim'
 
 " Nerd Tree
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
+" Color Schemes
+Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+colorscheme gruvbox                   " Default colorscheme
