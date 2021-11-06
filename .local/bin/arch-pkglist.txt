@@ -3,12 +3,12 @@ amd-ucode
 base-devel
 bash-completion
 efibootmgr
+fd
 firefox
+fzf
 git
 htop
 lsd
-fd
-fzf
 neofetch
 nitrogen
 nvidia
@@ -17,10 +17,11 @@ nvidia-utils
 openssh
 pacman-contrib
 picom
+qtile
 reflector
 systemd-resolvconf
+the_silver_searcher
 tree
 wireguard-tools
-qtile
 xorg
 xorg-xinit

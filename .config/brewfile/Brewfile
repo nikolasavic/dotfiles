@@ -5,6 +5,7 @@ brew gnu-indent
 brew jenv
 brew lsd
 brew fzf
+brew the_silver_searcher
 brew fd
 brew pipx
 brew pyenv
