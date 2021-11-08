@@ -21,6 +21,7 @@ let mapleader = "\<Space>"            " Remap leader
 
 " Display
 set showcmd                           " Show partial commands
+map <Leader>r :set relativenumber!<CR>" Toggle relative numbering
 
 " Filetype Behavior
 filetype on                           " Enable filetype detection
@@ -50,11 +51,17 @@ set autoindent                        " Auto indent
 set listchars=trail:·,tab:-,nbsp:␣
 set list
 
+" Avoid accidental command line window
+map q: :q
+
 " FZF
 map <Leader>f :FZF<CR>
+map <Leader>a :Ag<CR>
 
 " Nerdtree
 nnoremap <C-n> :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFind<CR>
+
 
 " vim plug
 call plug#begin()
