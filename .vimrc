@@ -21,7 +21,7 @@ let mapleader = "\<Space>"            " Remap leader
 
 " Display
 set showcmd                           " Show partial commands
-map <Leader>r :set relativenumber!<CR>" Toggle relative numbering
+set laststatus=2                      " Fix lightline
 
 " Filetype Behavior
 filetype on                           " Enable filetype detection
@@ -54,6 +54,10 @@ set list
 " Avoid accidental command line window
 map q: :q
 
+" Add empty lines
+map <Leader>j o<ESC>
+map <Leader>k O<ESC>
+
 " FZF
 map <Leader>f :FZF<CR>
 map <Leader>a :Ag<CR>
@@ -62,20 +66,20 @@ map <Leader>a :Ag<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFind<CR>
 
+" Relative numbering
+map <Leader>r :set relativenumber!<CR>" Toggle relative numbering
 
 " vim plug
 call plug#begin()
 
-" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" Nerd Tree
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-
-" Color Schemes
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " FZF
+Plug 'junegunn/fzf.vim'                               " FZF.vim - vim wrapper for fzf
+Plug 'preservim/nerdtree'                             " NerdTree
+Plug 'ludovicchabant/vim-gutentags'                   " Effortless tag management
+Plug 'itchyny/lightline.vim'                          " Lightline bar
+Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
