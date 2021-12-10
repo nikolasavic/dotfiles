@@ -12,3 +12,5 @@ if cmd_exist picom ; then
   __kill picom
   __start picom
 fi
+
+qtile run-cmd -g 3 alacritty
