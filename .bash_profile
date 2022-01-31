@@ -1,6 +1,3 @@
-# Env
-source $HOME/.config/env/defaults
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Start X
