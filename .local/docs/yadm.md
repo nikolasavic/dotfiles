@@ -3,10 +3,10 @@
 ### Alternative files
 * To switch between alternative files  
 `yadm config local.class work`  
-`yadm config local.class person`  
+`yadm config local.class personal`   
 
 * If you changed the `.gitconfig` file in the process due to class switches, you'll need to restore the appropriate file for the current class  
-`yadm checkout .gitignore`
+`yadm checkout .gitconfig`
 
 
 ### Multiple Github Accounts
