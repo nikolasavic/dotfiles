@@ -2,6 +2,7 @@
 brew brew-file
 brew git
 brew gnu-indent
+brew ctags
 brew jenv
 brew lsd
 brew fzf
