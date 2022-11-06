@@ -44,6 +44,19 @@ _note: to enter vim mode in the alacritty terminal emulater: `ctrl+shift+space`_
 
 reference: https://vimhelp.org/terminal.txt.html
 
+#### Ctags
+* go to source  
+  `ctrl+]`  
+
+* search
+  `:tag <searchTag>`  
+  `:tag A<tab>` autocompletes all tags starting with a
+* tag stack
+  * see last 20 tags used  
+    `:tags`
+  * pop from tag stack  
+   `ctrl+T` or `:pop`
+
 #### Switching tab expansion on and off
 * off: `set noet`
 * on: `set et`
