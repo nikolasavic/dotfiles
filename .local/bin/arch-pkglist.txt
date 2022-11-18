@@ -2,6 +2,7 @@ alacritty
 amd-ucode
 base-devel
 bash-completion
+clang
 efibootmgr
 fd
 firefox
