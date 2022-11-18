@@ -122,7 +122,7 @@ screens = [
                 ),
                 widget.ThermalSensor(),
                 widget.Systray(),
-                widget.Clock(format="%_W  %a %b %m %Y - %I:%M %p"),
+                widget.Clock(format="  %_W %a %b %d %Y - %I:%M %p"),
                 widget.QuickExit(default_text="", countdown_format="{}"),
             ],
             24,
