@@ -77,6 +77,7 @@ Plug 'junegunn/fzf.vim'                               " FZF.vim - vim wrapper fo
 Plug 'preservim/nerdtree'                             " NerdTree
 Plug 'ludovicchabant/vim-gutentags'                   " Effortless tag management
 Plug 'itchyny/lightline.vim'                          " Lightline bar
+Plug 'dense-analysis/ale'                             " Vim ALE
 Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
