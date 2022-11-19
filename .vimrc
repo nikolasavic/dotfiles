@@ -65,6 +65,13 @@ map <Leader>nf :NERDTreeFind<CR>
 " Relative numbering
 map <Leader>r :set relativenumber!<CR>" Toggle relative numbering
 
+" ALE
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+command D :ALEGoToDefinition
+command H :ALEHover
+command R :ALERename
+
 " vim plug
 call plug#begin()
 
