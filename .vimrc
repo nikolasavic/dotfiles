@@ -54,10 +54,6 @@ set list
 " Avoid accidental command line window
 map q: :q
 
-" Add empty lines
-map <Leader>j o<ESC>
-map <Leader>k O<ESC>
-
 " FZF
 map <Leader>f :FZF<CR>
 map <Leader>a :Ag<CR>
