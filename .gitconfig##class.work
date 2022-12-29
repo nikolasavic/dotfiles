@@ -1,7 +1,0 @@
-[user]
-	email = nikolasavic@thoughtworks.com
-	name = Nikola Savic
-[pull]
-	rebase = true
-[core]
-	excludesfile = /Users/nikola/.gitignore
