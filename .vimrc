@@ -54,6 +54,9 @@ set list
 " Avoid accidental command line window
 map q: :q
 
+" Use new regular expression engine
+set re=0
+
 " FZF
 map <Leader>f :FZF<CR>
 map <Leader>a :Ag<CR>
@@ -61,6 +64,7 @@ map <Leader>a :Ag<CR>
 " Nerdtree
 nnoremap <C-n> :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFind<CR>
+let g:NERDTreeMinimalMenu=1
 
 " Relative numbering
 map <Leader>r :set relativenumber!<CR>" Toggle relative numbering
