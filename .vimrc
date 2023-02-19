@@ -72,9 +72,11 @@ map <Leader>r :set relativenumber!<CR>" Toggle relative numbering
 " ALE
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+let g:ale_completion_autoimport = 1
 command D :ALEGoToDefinition
 command H :ALEHover
 command R :ALERename
+command F :ALEFindReferences
 
 " vim plug
 call plug#begin()
