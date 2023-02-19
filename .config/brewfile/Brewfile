@@ -15,6 +15,7 @@ brew scala
 brew starship
 brew tree
 brew yadm
+brew zsh-completion
 
 # Other Cask applications
 cask docker

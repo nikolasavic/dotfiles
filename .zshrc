@@ -1,6 +1,14 @@
 # Emacs keybindings
 bindkey -e
 
+# Zsh completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Alias
 source $HOME/.config/alias/navigation
 source $HOME/.config/alias/git
