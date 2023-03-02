@@ -2,7 +2,7 @@
 brew brew-file
 brew git
 brew gnu-indent
-brew ctags
+brew --HEAD universal-ctags/universal-ctags/universal-ctags
 brew jenv
 brew lsd
 brew fzf
