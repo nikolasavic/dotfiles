@@ -1,0 +1,7 @@
+# JS/TS
+--exclude=node_modules
+--exclude=dist
+
+# IDEs
+--exclude=.idea
+--exclude=.vscode
