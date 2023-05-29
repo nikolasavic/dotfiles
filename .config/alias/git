@@ -10,8 +10,10 @@ alias gdc='git diff --cached'
 
 alias gm='git merge'
 
+# Stash
 alias gsh='git stash'
 alias gshp='git stash pop'
+alias gshl='git stash list'
 
 # Add
 alias ga='git add'
@@ -53,5 +55,6 @@ alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gdel='git branch -D'
 alias grdel='git push origin --delete'
+alias grpo='git remote prune origin'
 
 alias glog='git log --graph --all --oneline --color --decorate=short'
