@@ -13,6 +13,7 @@ fi
 source $HOME/.config/alias/navigation
 source $HOME/.config/alias/git
 source $HOME/.config/alias/fzf
+source $HOME/.config/alias/java
 source $HOME/.config/alias/spark
 
 # Starship Prompt
