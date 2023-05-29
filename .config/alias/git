@@ -21,7 +21,6 @@ alias gall='git add -A .'
 # Commit
 alias gc='git commit -v'
 alias gcm='git commit -m'
-alias gcf='git commit --fixup'
 alias gcam='git commit --amend'
 
 # Rebase
@@ -30,7 +29,6 @@ alias grei='git rebase -i'
 alias greia='git rebase -i --autosquash'
 alias grea='git rebase --abort'
 alias grec='git rebase --continue'
-alias gres='git rebase --skip'
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 
