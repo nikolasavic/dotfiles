@@ -2,18 +2,18 @@
 brew brew-file
 brew git
 brew gnu-indent
-brew --HEAD universal-ctags/universal-ctags/universal-ctags
+brew fd
+brew fzf
 brew jenv
 brew lsd
-brew fzf
-brew the_silver_searcher
-brew fd
 brew pipx
 brew pyenv
 brew sbt
 brew scala
 brew starship
+brew the_silver_searcher
 brew tree
+brew --HEAD universal-ctags/universal-ctags/universal-ctags
 brew yadm
 brew zsh-completion
 
