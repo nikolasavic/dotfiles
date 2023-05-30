@@ -1,5 +1,8 @@
 # Homebrew packages
 brew brew-file
+brew colima
+brew docker
+brew docker-compose
 brew git
 brew gnu-indent
 brew fd
@@ -16,9 +19,6 @@ brew tree
 brew --HEAD universal-ctags/universal-ctags/universal-ctags
 brew yadm
 brew zsh-completion
-
-# Other Cask applications
-cask docker
 
 # Nerd Fonts
 tap homebrew/cask-fonts
